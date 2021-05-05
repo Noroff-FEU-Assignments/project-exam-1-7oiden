@@ -1,0 +1,102 @@
+@import "imports/common_styles.css";
+
+/* main
+--------------------*/
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+section {
+  width: 85%;
+  margin: 0 auto 2rem auto;
+  display: flex;
+  flex-direction: column;
+}
+h1 {
+  font-family: var(--century-gothic);
+  color: var(--black);
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+#contact-form {
+  background-color: var(--light-blue);
+  border: none;
+  margin-bottom: 2rem;
+  padding-right: 7.5%;
+  padding-left: 7.5%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+}
+.contact-input {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+textarea {
+  height: 200px;
+  font-family: var(--open-sans);
+  font-size: 1rem;
+}
+#name-error,
+#subject-error,
+#contact-email-error,
+#message-error {
+  visibility: hidden;
+}
+#success-message {
+  color: green;
+}
+#success-message:before {
+  content: "\2713";
+  font-size: 1.5rem;
+  margin-right: 3px;
+}
+
+/* styles that change
+--------------------*/
+@media only screen and (min-width: 576px) {
+  section {
+    width: 70%;
+  }
+  #contact-form {
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 1.35rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .content-wrapper {
+    width: 85%;
+    flex-direction: row;
+    margin: 0 auto;
+    /* background-color: blueviolet; */
+  }
+  section {
+    flex: 2;
+  }
+  h1 {
+    font-size: 1.75rem;
+  }
+  #contact-form {
+    padding-right: 15%;
+    padding-left: 15%;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  section {
+    flex: 3;
+  }
+  #contact-form {
+    width: 70%;
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+}

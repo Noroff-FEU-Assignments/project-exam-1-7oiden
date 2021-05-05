@@ -1,0 +1,112 @@
+@import "imports/common_styles.css";
+
+/* main
+--------------------*/
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+section {
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+#first-post {
+  margin-top: 0;
+}
+h1 {
+  font-family: var(--century-gothic);
+  color: var(--black);
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+h4 {
+  font-family: var(--adobe-caslon);
+  font-size: 1.25rem;
+  text-decoration: underline;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  /* background-color: aqua; */
+}
+.divider {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.post-text {
+  margin-top: 0;
+}
+.post-container {
+  /* max-width: 306px; */
+  margin: 0 auto;
+}
+.post-image {
+  width: 306px;
+  height: 188px;
+  margin: 0;
+}
+.info-container {
+  display: flex;
+  margin-bottom: 0;
+  padding: 0;
+}
+.info-container p {
+  padding-right: 10px;
+  color: #5e7c88;
+  font-size: 0.875rem;
+  font-weight: 800;
+  padding: 0;
+  margin-top: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+/* styles that change
+--------------------*/
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 1.375rem;
+  }
+  .post-wrapper {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: auto auto;
+    gap: 50px;
+    /* background-color: darkorange; */
+  }
+}
+@media only screen and (min-width: 1200px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+  .content-wrapper {
+    width: 85%;
+    flex-direction: row;
+    margin: 0 auto;
+    /* background-color: blueviolet; */
+  }
+  section {
+    flex: 2;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  section {
+    flex: 3;
+    /* background-color: blueviolet; */
+  }
+  .post-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    /* background-color: darkorange; */
+  }
+  .post-container {
+    width: 70%;
+  }
+  .post-image {
+    width: 524px;
+    height: 324px;
+  }
+}
