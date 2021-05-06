@@ -14,7 +14,7 @@ async function fetchPosts() {
     const response = await fetch(postsUrl);
     const results = await response.json();
 
-    //console.log(results);
+    console.log(results);
 
     postWrapper.innerHTML = "";
 
@@ -26,22 +26,22 @@ async function fetchPosts() {
       const mediaArray = results[i]._embedded["wp:featuredmedia"];
 
       //console.log(mediaArray);
+      //console.log(results[i].content.rendered);
 
-      for (let i = 0; i < mediaArray.length; i++) {
-        console.log(mediaArray[i].source_url);
+      for (let j = 0; j < mediaArray.length; j++) {
+        console.log(mediaArray[j].source_url);
 
         postWrapper.innerHTML += `
       <div class="post-container">
      <a href="specific_post.html?id=${results[i].id}">
      <figure class="post-image">
-     <img class="post-image" src="${mediaArray[i].source_url}"/>
+     <img class="post-image" src="${mediaArray[j].source_url}"/>
      </figure>
      <h4>${results[i].title.rendered}</h4>
      <div class="info-container">
      </div>
-     <p class="post-text> ${results[i].status}</p>
+     <div class="post-text">${results[i].content.rendered}</div>
      </a>
-     <hr class="divider" />
      </div>`;
       }
     }
@@ -54,3 +54,5 @@ async function fetchPosts() {
 }
 
 fetchPosts();
+
+//<img class="post-image" src="${mediaArray[i].source_url}" />;

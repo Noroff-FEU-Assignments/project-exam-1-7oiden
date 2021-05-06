@@ -36,6 +36,8 @@ h4 {
 }
 .post-text {
   margin-top: 0;
+  height: 150px;
+  overflow: hidden;
 }
 .post-container {
   /* max-width: 306px; */
