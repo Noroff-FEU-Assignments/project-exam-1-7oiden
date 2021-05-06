@@ -46,7 +46,18 @@ fetchSpecific();
 
 function createHtml(details) {
   currentBreadcrumb.innerHTML = `${details.title.rendered}`;
-  postImage.innerHTML = `<img class="post-image" src="${details._embedded["wp:featuredmedia"]["0"].source_url}"/>`;
-  postHeading.innerHTML = `${details.title.rendered}`;
-  contentText.innerHTML = `${details.content.rendered}`;
+
+  postContainer.innerHTML = `
+  <figure class="post-image">
+     <img class="post-image" src="${details._embedded["wp:featuredmedia"]["0"].source_url}""/>
+     </figure>
+     <h2>${details.title.rendered}</h2>
+     <div class="info-container">
+     <p>
+     <p>/</p>
+     <p></p>
+     </div>
+     <p class="post-text">${details.content.rendered}</p>
+ `;
+
 }

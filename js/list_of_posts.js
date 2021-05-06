@@ -23,13 +23,33 @@ async function fetchPosts() {
       //   continue;
       // }
 
+      //console.log(mediaArray);
+
+      //console.log(category);
+      let category = results[i].categories[0];
+      let categoryName;
+
+      switch (category) {
+        case 5:
+          categoryName = "Black & white";
+          break;
+        case 4:
+          categoryName = "Portrait";
+          break;
+        case 3:
+          categoryName = "Landscape";
+          break;
+        case 2:
+          categoryName = "Street";
+          break;
+        case 1:
+          categoryName = "Uknown";
+          break;
+      }
+
       const mediaArray = results[i]._embedded["wp:featuredmedia"];
 
-      //console.log(mediaArray);
-      //console.log(results[i].content.rendered);
-
       for (let j = 0; j < mediaArray.length; j++) {
-        console.log(mediaArray[j].source_url);
 
         postWrapper.innerHTML += `
       <div class="post-container">
@@ -39,9 +59,13 @@ async function fetchPosts() {
      </figure>
      <h4>${results[i].title.rendered}</h4>
      <div class="info-container">
+     <p>${categoryName}
+     <p>/</p>
+     <p>${results[i].date}</p>
      </div>
      <div class="post-text">${results[i].content.rendered}</div>
      </a>
+     <hr/>
      </div>`;
       }
     }

@@ -111,6 +111,35 @@ h4 {
   margin-bottom: 0;
   /* background-color: blueviolet; */
 }
+/* loading styles */
+.error {
+  color: white;
+  font-size: 1.125rem;
+  padding: 1rem 2rem 1rem 2rem;
+  background-color: #be3e35;
+  text-align: center;
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 10px;
+}
+.spinner {
+  border: 8px solid #5c73f240;
+  border-top: 8px solid #5c73f2;
+  margin: 50px 0;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s ease-in-out infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /* styles that change
 --------------------*/
 @media only screen and (min-width: 768px) {
