@@ -50,7 +50,6 @@ async function fetchPosts() {
       const mediaArray = results[i]._embedded["wp:featuredmedia"];
 
       for (let j = 0; j < mediaArray.length; j++) {
-
         postWrapper.innerHTML += `
       <div class="post-container">
      <a href="specific_post.html?id=${results[i].id}">
@@ -80,4 +79,3 @@ async function fetchPosts() {
 fetchPosts();
 
 //<img class="post-image" src="${mediaArray[i].source_url}" />;
-

@@ -84,6 +84,7 @@ function createHtml(details) {
  `;
 }
 
+//fetch comments
 const commentWrapper = document.querySelector(".comment-wrapper");
 
 const commentUrl =
@@ -107,6 +108,7 @@ async function fetchComments() {
        <div>
        <div class="info-container"> </div>
        <h4>${comments[i].author_name}</h4>
+       <div class="info-container"><p>${comments[i].date}</p></div>
        <div class="comment-text">${comments[i].content.rendered} </div>
        </div>
        </div> `;
