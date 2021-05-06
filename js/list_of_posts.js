@@ -1,20 +1,20 @@
 const postWrapper = document.querySelector(".post-wrapper");
 
+const embed = "?_embed";
+
 const postsUrl =
-  "http://7oiden.com/passionate-photography/wp-json/wp/v2/posts/";
+  "http://7oiden.com/passionate-photography/wp-json/wp/v2/posts/" + embed;
 
 // const corsEnabledUrl = "https://noroffcors.herokuapp.com/" + postsUrl;
 
-console.log("hi");
-
-console.log(postsUrl);
+//console.log(postsUrl);
 
 async function fetchPosts() {
   try {
     const response = await fetch(postsUrl);
     const results = await response.json();
 
-    console.log(results);
+    //console.log(results);
 
     postWrapper.innerHTML = "";
 
@@ -23,21 +23,27 @@ async function fetchPosts() {
       //   continue;
       // }
 
-      console.log(results[i].slug);
+      const mediaArray = results[i]._embedded["wp:featuredmedia"];
 
-      postWrapper.innerHTML += `
+      //console.log(mediaArray);
+
+      for (let i = 0; i < mediaArray.length; i++) {
+        console.log(mediaArray[i].source_url);
+
+        postWrapper.innerHTML += `
       <div class="post-container">
-     <a href="specific_post.html?id=${results[i].id}"
+     <a href="specific_post.html?id=${results[i].id}">
      <figure class="post-image">
-     <img class="post-image src="images/asian_street-720-crop.jpg"/> 
+     <img class="post-image" src="${mediaArray[i].source_url}"/>
      </figure>
-     <h4>${results[i].slug}</h4>
+     <h4>${results[i].title.rendered}</h4>
      <div class="info-container">
      </div>
      <p class="post-text> ${results[i].status}</p>
      </a>
      <hr class="divider" />
      </div>`;
+      }
     }
   } catch (error) {
     console.log(error);
