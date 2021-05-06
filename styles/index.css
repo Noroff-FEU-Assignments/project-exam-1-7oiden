@@ -212,8 +212,8 @@ h4 {
     background-image: url("../images/main_background_image.jpg");
   }
   .main-heading p {
-  font-size: 1.375rem;
-}
+    font-size: 1.375rem;
+  }
   h1 {
     font-size: 3.75rem;
     margin-top: 100px;

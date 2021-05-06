@@ -59,11 +59,11 @@ async function fetchPosts() {
      </figure>
      <h4>${results[i].title.rendered}</h4>
      <div class="info-container">
-     <p>${categoryName}
+     <p>${categoryName}</p>
      <p>/</p>
      <p>${results[i].date}</p>
      </div>
-     <div class="post-text">${results[i].content.rendered}</div>
+     <div class="post-text">${results[i].excerpt.rendered}</div>
      </a>
      <hr/>
      </div>`;
@@ -80,3 +80,4 @@ async function fetchPosts() {
 fetchPosts();
 
 //<img class="post-image" src="${mediaArray[i].source_url}" />;
+
