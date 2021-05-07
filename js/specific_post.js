@@ -102,9 +102,11 @@ async function fetchComments() {
     for (let i = 0; i < comments.length; i++) {
       console.log(comments[i]);
 
+      console.log(comments[i].author_avatar_urls[96]);
+
       commentWrapper.innerHTML += `
        <div class="comment-container">
-       <figure class="comment-image"><img class="comment-image" src="images/edward.png"/> </figure>
+       <figure class="comment-image"><img class="comment-image" src="${comments[i].author_avatar_urls[96]}"/> </figure>
        <div>
        <div class="info-container"> </div>
        <h4>${comments[i].author_name}</h4>

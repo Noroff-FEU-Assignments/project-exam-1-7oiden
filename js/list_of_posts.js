@@ -19,10 +19,9 @@ async function fetchPosts() {
     postWrapper.innerHTML = "";
 
     for (let i = 0; i < results.length; i++) {
-      // if (results[i].rt_score < 85) {
-      //   continue;
-      // }
-
+      if (i >= 4 && document.title === "home-page") {
+        break;
+      }
       //console.log(mediaArray);
 
       //console.log(category);
@@ -64,13 +63,13 @@ async function fetchPosts() {
      </div>
      <div class="post-text">${results[i].excerpt.rendered}</div>
      </a>
-     <hr/>
+     <hr id="post-divider"/>
      </div>`;
       }
     }
   } catch (error) {
     console.log(error);
-    resultsContainer.innerHTML = displayError(
+    postWrapper.innerHTML = displayError(
       "An error has occured when trying to retrive the API"
     );
   }

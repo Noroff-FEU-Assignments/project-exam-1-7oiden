@@ -50,3 +50,40 @@ function validateEmail(newsletterEmail) {
   const patternMatches = regEx.test(newsletterEmail);
   return patternMatches;
 }
+
+//aside
+const recentPosts = document.querySelector(".recent-posts-list");
+
+const recentPostsUrl =
+  "http://7oiden.com/passionate-photography/wp-json/wp/v2/posts/";
+
+// const corsEnabledUrl = "https://noroffcors.herokuapp.com/" + postsUrl;
+
+//console.log(postsUrl);
+
+async function fetchPosts() {
+  try {
+    const response = await fetch(recentPostsUrl);
+    const results = await response.json();
+
+    console.log(results);
+
+    recentPosts.innerHTML = "";
+
+    for (let i = 0; i < results.length; i++) {
+      if (i >= 4) {
+        break;
+      }
+      recentPosts.innerHTML += `
+      <li><a href="specific_post.html?id=${results[i].id}">${results[i].title.rendered}</a></li>
+      `;
+    }
+  } catch (error) {
+    console.log(error);
+    resultsContainer.innerHTML = displayError(
+      "An error has occured when trying to retrive the API"
+    );
+  }
+}
+
+fetchPosts();
