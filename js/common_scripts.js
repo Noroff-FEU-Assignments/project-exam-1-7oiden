@@ -55,7 +55,7 @@ function validateEmail(newsletterEmail) {
 const recentPosts = document.querySelector(".recent-posts-list");
 
 const recentPostsUrl =
-  "http://7oiden.com/passionate-photography/wp-json/wp/v2/posts/";
+  "http://7oiden.com/passionate-photography/wp-json/wp/v2/posts/?_embed";
 
 // const corsEnabledUrl = "https://noroffcors.herokuapp.com/" + postsUrl;
 

@@ -47,6 +47,7 @@ async function fetchSpecific() {
 fetchSpecific();
 
 function createHtml(details) {
+
   let category = details.categories[0];
   let categoryName;
 
@@ -79,6 +80,8 @@ function createHtml(details) {
       <p>${categoryName}</p>
      <p>/</p>
      <p>${details.date}</p>
+     <p>/</p>
+     <p> </p>
      </div>
      <p class="post-text">${details.content.rendered}</p>
  `;

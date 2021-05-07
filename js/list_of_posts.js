@@ -22,6 +22,19 @@ async function fetchPosts() {
       if (i >= 4 && document.title === "home-page") {
         break;
       }
+      //fetch number of comments
+      const repliesArray = results[i]._embedded.replies;
+
+      let numReplies = 0;
+
+      if (repliesArray) {
+        for (let y = 0; y < repliesArray.length; y++) {
+          numReplies = repliesArray[y].length;
+        }
+      }
+      
+      console.log(numReplies);
+
       //console.log(mediaArray);
 
       //console.log(category);
@@ -60,6 +73,8 @@ async function fetchPosts() {
      <p>${categoryName}</p>
      <p>/</p>
      <p>${results[i].date}</p>
+     <p>/</p>
+     <p>${numReplies} comments</p>
      </div>
      <div class="post-text">${results[i].excerpt.rendered}</div>
      </a>
