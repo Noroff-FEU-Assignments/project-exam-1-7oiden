@@ -47,7 +47,6 @@ async function fetchSpecific() {
 fetchSpecific();
 
 function createHtml(details) {
-
   let category = details.categories[0];
   let categoryName;
 
@@ -69,7 +68,16 @@ function createHtml(details) {
       break;
   }
 
-  console.log(details._embedded.replies[0].length);
+  console.log(details._embedded.replies);
+  replies = details._embedded.replies;
+
+  let numReplies = 0;
+
+  if (replies) {
+    numReplies = replies[0].length;
+  }
+
+  console.log(numReplies);
 
   currentBreadcrumb.innerHTML = `${details.title.rendered}`;
 
@@ -83,7 +91,7 @@ function createHtml(details) {
      <p>/</p>
      <p>${details.date}</p>
      <p>/</p>
-     <p>${details._embedded.replies[0].length} comments</p>
+     <p>${numReplies} comments</p>
      </div>
      <p class="post-text">${details.content.rendered}</p>
  `;

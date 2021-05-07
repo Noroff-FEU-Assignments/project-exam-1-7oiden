@@ -32,7 +32,7 @@ async function fetchPosts() {
           numReplies = repliesArray[y].length;
         }
       }
-      
+
       console.log(numReplies);
 
       //console.log(mediaArray);
@@ -79,7 +79,8 @@ async function fetchPosts() {
      <div class="post-text">${results[i].excerpt.rendered}</div>
      </a>
      <hr id="post-divider"/>
-     </div>`;
+     </div>
+     `;
       }
     }
   } catch (error) {
@@ -92,4 +93,28 @@ async function fetchPosts() {
 
 fetchPosts();
 
-//<img class="post-image" src="${mediaArray[i].source_url}" />;
+//load more button
+const postLoader = document.querySelector("#load-button");
+
+let currentPosts = 2;
+
+function loadMorePosts(event) {
+  console.log("hi");
+  const postList = [
+    ...document.querySelectorAll(".post-wrapper .post-container"),
+  ];
+
+  for (let u = currentPosts; u < currentPosts + 2; u++) {
+    if (postList[u]) {
+      postList[u].style.display = "block";
+    }
+  }
+
+  currentPosts += 2;
+
+  if (currentPosts >= postList.length) {
+    event.target.style.display = "none";
+  }
+}
+
+postLoader.addEventListener("click", loadMorePosts);

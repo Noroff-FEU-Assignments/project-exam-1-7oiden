@@ -40,8 +40,14 @@ h4 {
   overflow: hidden;
 }
 .post-container {
-  /* max-width: 306px; */
   margin: 0 auto;
+  display: none;
+}
+.post-container:nth-child(1) {
+  display: block;
+}
+.post-container:nth-child(2) {
+  display: block;
 }
 .post-image {
   width: 306px;
