@@ -85,9 +85,9 @@ section {
   margin-bottom: 1rem;
 }
 .feature-image {
-  margin: 0 2rem 0 0;
-  width: 306px;
-  height: 188px;
+  margin: 0 2rem 2rem 0;
+  width: 524px;
+  height: 324px;
 }
 /* .slideshow-container {
   display: flex;

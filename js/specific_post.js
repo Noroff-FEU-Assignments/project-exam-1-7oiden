@@ -27,7 +27,7 @@ async function fetchSpecific() {
     const response = await fetch(specificPostUrl);
     const details = await response.json();
 
-    ////console.log(details);
+   console.log(details);
 
     ////console.log(details._embedded["wp:featuredmedia"]["0"].source_url);
 
@@ -68,7 +68,6 @@ function createHtml(details) {
       break;
   }
 
-  console.log(details._embedded.replies);
   replies = details._embedded.replies;
 
   let numReplies = 0;

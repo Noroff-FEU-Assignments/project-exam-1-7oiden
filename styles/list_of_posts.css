@@ -49,6 +49,12 @@ h4 {
 .post-container:nth-child(2) {
   display: block;
 }
+.post-container:nth-child(3) {
+  display: block;
+}
+.post-container:nth-child(4) {
+  display: block;
+}
 .post-image {
   width: 306px;
   height: 188px;
@@ -73,8 +79,12 @@ h4 {
   text-transform: uppercase;
 }
 #post-divider {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+#load-button {
+  margin-top: 0;
+  margin-bottom: 4rem;
 }
 /* loading styles */
 .post-loader {

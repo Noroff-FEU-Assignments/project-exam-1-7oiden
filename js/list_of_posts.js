@@ -1,4 +1,5 @@
 const postWrapper = document.querySelector(".post-wrapper");
+const featureWrapper = document.querySelector(".feature-wrapper");
 
 const embed = "?_embed";
 
@@ -81,6 +82,27 @@ async function fetchPosts() {
      <hr id="post-divider"/>
      </div>
      `;
+
+        if ((results[i].tags.length > 0) && document.title === "home-page") {
+             featureWrapper.innerHTML += `
+      <div class="feature-container">
+     <a href="specific_post.html?id=${results[i].id}">
+     <figure class="feature-image">
+     <img class="feature-image" src="${mediaArray[j].source_url}"/>
+     </figure>
+     <h4>${results[i].title.rendered}</h4>
+     <div class="info-container">
+     <p>${categoryName}</p>
+     <p>/</p>
+     <p>${results[i].date}</p>
+     <p>/</p>
+     <p>${numReplies} comments</p>
+     </div>
+     <div class="post-text">${results[i].excerpt.rendered}</div>
+     </a>
+     <hr id="post-divider"/>
+     </div>`
+        }
       }
     }
   } catch (error) {
@@ -96,10 +118,10 @@ fetchPosts();
 //load more button
 const postLoader = document.querySelector("#load-button");
 
-let currentPosts = 2;
+let currentPosts = 4;
 
 function loadMorePosts(event) {
-  console.log("hi");
+
   const postList = [
     ...document.querySelectorAll(".post-wrapper .post-container"),
   ];
