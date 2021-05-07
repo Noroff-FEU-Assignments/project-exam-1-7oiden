@@ -20,7 +20,7 @@ specificPostUrl =
 
 // const corsFix = "https://noroffcors.herokuapp.com/" + specificPostUrl;
 
-console.log(specificPostUrl);
+//console.log(specificPostUrl);
 
 async function fetchSpecific() {
   try {
@@ -69,11 +69,13 @@ function createHtml(details) {
       break;
   }
 
+  console.log(details._embedded.replies[0].length);
+
   currentBreadcrumb.innerHTML = `${details.title.rendered}`;
 
   postContainer.innerHTML = `
   <figure class="post-image">
-     <img class="post-image" src="${details._embedded["wp:featuredmedia"]["0"].source_url}""/>
+     <img class="post-image" src="${details._embedded["wp:featuredmedia"]["0"].source_url}"/>
      </figure>
      <h2>${details.title.rendered}</h2>
      <div class="info-container">
@@ -81,7 +83,7 @@ function createHtml(details) {
      <p>/</p>
      <p>${details.date}</p>
      <p>/</p>
-     <p> </p>
+     <p>${details._embedded.replies[0].length} comments</p>
      </div>
      <p class="post-text">${details.content.rendered}</p>
  `;
@@ -98,14 +100,14 @@ async function fetchComments() {
     const response = await fetch(commentUrl);
     const comments = await response.json();
 
-    console.log(comments);
+    //console.log(comments);
 
     commentWrapper.innerHTML = "";
 
     for (let i = 0; i < comments.length; i++) {
-      console.log(comments[i]);
+      //console.log(comments[i]);
 
-      console.log(comments[i].author_avatar_urls[96]);
+      //console.log(comments[i].author_avatar_urls[96]);
 
       commentWrapper.innerHTML += `
        <div class="comment-container">
