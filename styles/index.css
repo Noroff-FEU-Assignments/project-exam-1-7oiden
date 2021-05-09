@@ -76,8 +76,6 @@ h1 {
   margin: 0 auto;
 }
 section {
-  padding-bottom: 3rem;
-  /* background-color: blueviolet; */
 }
 .feature-wrapper {
   display: flex;
@@ -88,6 +86,13 @@ section {
   margin: 0 2rem 2rem 0;
   width: 524px;
   height: 324px;
+}
+.feature-text {
+  margin-top: 0;
+  margin-bottom: 0;
+  height: 200px;
+  max-width: 90%;
+  overflow: hidden;
 }
 /* .slideshow-container {
   display: flex;
@@ -113,8 +118,6 @@ section {
 }
 .post-text {
   margin-top: 0;
-  margin-top: 0;
-  max-width: 450px;
   height: 150px;
   overflow: hidden;
 }
@@ -156,7 +159,7 @@ h4 {
 }
 .post-link {
   text-align: center;
-  margin: 3rem auto 1rem auto;
+  margin: 6rem auto 4rem auto;
 }
 .arrow-wrapper {
   display: flex;
@@ -238,6 +241,12 @@ h4 {
   }
   h4 {
     margin-top: 0;
+  }
+  .feature-text {
+    max-width: 80%;
+  }
+  .post-text {
+    max-width: 90%;
   }
 }
 @media only screen and (min-width: 1200px) {

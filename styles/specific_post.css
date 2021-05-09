@@ -19,6 +19,8 @@ section {
 section a {
   margin-top: 2rem;
 }
+.post-text {
+}
 h1,
 h3 {
   font-family: var(--century-gothic);
@@ -173,6 +175,9 @@ h4 {
   h2 {
     font-size: 1.375rem;
   }
+  .post-text {
+    max-width: 90%;
+}
 }
 @media only screen and (min-width: 1200px) {
   .content-wrapper {
@@ -196,8 +201,7 @@ h4 {
   .info-container p {
     font-size: 1rem;
   }
-  .post-text {
-  }
+ 
 }
 @media only screen and (min-width: 1600px) {
   .blog-wrapper {

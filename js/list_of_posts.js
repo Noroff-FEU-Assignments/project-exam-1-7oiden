@@ -77,7 +77,7 @@ async function fetchPosts() {
      <p>/</p>
      <p>${numReplies} comments</p>
      </div>
-     <div class="post-text">${results[i].excerpt.rendered}</div>
+     <div class="post-text">${results[i].content.rendered}</div>
      </a>
      <hr id="post-divider"/>
      </div>
@@ -94,13 +94,12 @@ async function fetchPosts() {
      <div class="info-container">
      <p>${categoryName}</p>
      <p>/</p>
-     <p>${results[i].date}</p>
+     <p>${results[i].formatted_date}</p>
      <p>/</p>
      <p>${numReplies} comments</p>
      </div>
-     <div class="post-text">${results[i].excerpt.rendered}</div>
+     <div class="feature-text">${results[i].content.rendered}</div>
      </a>
-     <hr id="post-divider"/>
      </div>`;
         }
       }

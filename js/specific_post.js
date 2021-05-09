@@ -92,7 +92,7 @@ function createHtml(details) {
      <p>/</p>
      <p>${numReplies} comments</p>
      </div>
-     <p class="post-text">${details.content.rendered}</p>
+     <div class="post-text">${details.content.rendered}</div>
  `;
 }
 
