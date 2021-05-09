@@ -47,9 +47,31 @@ async function fetchSpecific() {
 fetchSpecific();
 
 function createHtml(details) {
-  let category = details.categories[0];
-  let categoryName;
+  replies = details._embedded.replies;
 
+  let numReplies = 0;
+
+  if (replies) {
+    numReplies = replies[0].length;
+  }
+
+  //console.log(numReplies);
+
+ 
+  currentBreadcrumb.innerHTML = `${details.title.rendered}`;
+
+
+  const categoriesArray = details.categories;
+
+  let categoryName;
+  let category = details.categories[0];
+
+  console.log(details.categories[0]);
+
+  if (categoriesArray.length === 0) {
+    categoryName = "Unspecified";
+    console.log(categoryName);
+  } else {
   switch (category) {
     case 5:
       categoryName = "Black & white";
@@ -64,29 +86,17 @@ function createHtml(details) {
       categoryName = "Street";
       break;
     case 1:
-      categoryName = "Uknown";
+      categoryName = "Uncategorized";
       break;
   }
-
-  replies = details._embedded.replies;
-
-  let numReplies = 0;
-
-  if (replies) {
-    numReplies = replies[0].length;
   }
-
-  console.log(numReplies);
-
-  currentBreadcrumb.innerHTML = `${details.title.rendered}`;
-
   postContainer.innerHTML = `
   <figure class="post-image">
      <img class="post-image" src="${details._embedded["wp:featuredmedia"]["0"].source_url}"/>
      </figure>
      <h2>${details.title.rendered}</h2>
      <div class="info-container">
-      <p>${categoryName}</p>
+    <p>${categoryName}</p>
      <p>/</p>
      <p>${details.formatted_date}</p>
      <p>/</p>
@@ -109,7 +119,7 @@ async function fetchComments() {
     const response = await fetch(commentUrl);
     const comments = await response.json();
 
-    console.log(comments);
+    //console.log(comments);
 
     commentWrapper.innerHTML = "";
 

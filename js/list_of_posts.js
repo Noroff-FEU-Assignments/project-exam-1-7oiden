@@ -34,30 +34,41 @@ async function fetchPosts() {
         }
       }
 
-      console.log(numReplies);
+      //console.log(numReplies);
 
       //console.log(mediaArray);
 
       //console.log(category);
-      let category = results[i].categories[0];
-      let categoryName;
 
-      switch (category) {
-        case 5:
-          categoryName = "Black & white";
-          break;
-        case 4:
-          categoryName = "Portrait";
-          break;
-        case 3:
-          categoryName = "Landscape";
-          break;
-        case 2:
-          categoryName = "Street";
-          break;
-        case 1:
-          categoryName = "Uknown";
-          break;
+      const categoriesArray = results[i].categories;
+
+      let categoryName;
+      let category = results[i].categories[0];
+
+      if (categoriesArray.length === 0) {
+        categoryName = "Unspecified";
+        console.log(categoryName);
+      } else {
+        switch (category) {
+          case 6:
+            categoryName = "Cityscape";
+            break;
+          case 5:
+            categoryName = "Black & white";
+            break;
+          case 4:
+            categoryName = "Portrait";
+            break;
+          case 3:
+            categoryName = "Landscape";
+            break;
+          case 2:
+            categoryName = "Street";
+            break;
+          case 1:
+            categoryName = "Uncategorized";
+            break;
+        }
       }
 
       const mediaArray = results[i]._embedded["wp:featuredmedia"];
