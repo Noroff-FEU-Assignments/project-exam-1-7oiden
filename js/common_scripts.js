@@ -52,7 +52,10 @@ function validateEmail(newsletterEmail) {
 }
 
 //aside
+//featured posts and recent posts
 const recentPosts = document.querySelector(".recent-posts-list");
+const featuredPosts = document.querySelector(".featured-posts-list");
+
 
 const recentPostsUrl =
   "http://7oiden.com/passionate-photography/wp-json/wp/v2/posts/?_embed";
@@ -71,13 +74,25 @@ async function fetchPosts() {
     recentPosts.innerHTML = "";
 
     for (let i = 0; i < results.length; i++) {
-      if (i >= 4) {
-        break;
-      }
-      recentPosts.innerHTML += `
+    
+      console.log(results[i].tags.length);
+
+      if (results[i].tags.length > 0) {
+      featuredPosts.innerHTML += `
       <li><a href="specific_post.html?id=${results[i].id}">${results[i].title.rendered}</a></li>
       `;
+      }
     }
+    
+    for (let j = 0; j < results.length; j++) {
+        if (j >= 4) {
+          break;
+        }
+        recentPosts.innerHTML += `
+      <li><a href="specific_post.html?id=${results[j].id}">${results[j].title.rendered}</a></li>
+      `;
+    }
+
   } catch (error) {
     console.log(error);
     resultsContainer.innerHTML = displayError(

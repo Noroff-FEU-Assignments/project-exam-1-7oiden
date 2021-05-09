@@ -73,7 +73,7 @@ async function fetchPosts() {
      <div class="info-container">
      <p>${categoryName}</p>
      <p>/</p>
-     <p>${results[i].date}</p>
+     <p>${results[i].formatted_date}</p>
      <p>/</p>
      <p>${numReplies} comments</p>
      </div>
@@ -83,8 +83,8 @@ async function fetchPosts() {
      </div>
      `;
 
-        if ((results[i].tags.length > 1) && document.title === "home-page") {
-             featureWrapper.innerHTML += `
+        if (results[i].tags.length > 1 && document.title === "home-page") {
+          featureWrapper.innerHTML += `
       <div class="feature-container">
      <a href="specific_post.html?id=${results[i].id}">
      <figure class="feature-image">
@@ -101,7 +101,7 @@ async function fetchPosts() {
      <div class="post-text">${results[i].excerpt.rendered}</div>
      </a>
      <hr id="post-divider"/>
-     </div>`
+     </div>`;
         }
       }
     }
@@ -121,7 +121,6 @@ const postLoader = document.querySelector("#load-button");
 let currentPosts = 4;
 
 function loadMorePosts(event) {
-
   const postList = [
     ...document.querySelectorAll(".post-wrapper .post-container"),
   ];

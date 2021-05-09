@@ -88,7 +88,7 @@ function createHtml(details) {
      <div class="info-container">
       <p>${categoryName}</p>
      <p>/</p>
-     <p>${details.date}</p>
+     <p>${details.formatted_date}</p>
      <p>/</p>
      <p>${numReplies} comments</p>
      </div>
