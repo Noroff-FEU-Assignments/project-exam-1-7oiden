@@ -83,7 +83,7 @@ async function fetchPosts() {
      </div>
      `;
 
-        if ((results[i].tags.length > 0) && document.title === "home-page") {
+        if ((results[i].tags.length > 1) && document.title === "home-page") {
              featureWrapper.innerHTML += `
       <div class="feature-container">
      <a href="specific_post.html?id=${results[i].id}">

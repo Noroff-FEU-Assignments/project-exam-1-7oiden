@@ -9,25 +9,25 @@ const queryString = document.location.search;
 
 const params = new URLSearchParams(queryString);
 
-const embed = "?_embed";
-
-////console.log(queryString);
+console.log(queryString);
 
 const id = params.get("id");
+
+const embed = "?_embed";
 
 specificPostUrl =
   "http://7oiden.com/passionate-photography/wp-json/wp/v2/posts/" + id + embed;
 
 // const corsFix = "https://noroffcors.herokuapp.com/" + specificPostUrl;
 
-//console.log(specificPostUrl);
+console.log(specificPostUrl);
 
 async function fetchSpecific() {
   try {
     const response = await fetch(specificPostUrl);
     const details = await response.json();
 
-   console.log(details);
+    console.log(details);
 
     ////console.log(details._embedded["wp:featuredmedia"]["0"].source_url);
 
@@ -100,14 +100,16 @@ function createHtml(details) {
 const commentWrapper = document.querySelector(".comment-wrapper");
 
 const commentUrl =
-  "http://7oiden.com/passionate-photography/wp-json/wp/v2/comments/";
+  "http://7oiden.com/passionate-photography/wp-json/wp/v2/comments?post=" + id;
+
+console.log(commentUrl);
 
 async function fetchComments() {
   try {
     const response = await fetch(commentUrl);
     const comments = await response.json();
 
-    //console.log(comments);
+    console.log(comments);
 
     commentWrapper.innerHTML = "";
 
