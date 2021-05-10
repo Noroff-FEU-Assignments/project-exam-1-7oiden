@@ -8,7 +8,8 @@ const order = "&orderby=date";
 const postsUrl =
   "http://7oiden.com/passionate-photography/wp-json/wp/v2/posts/" +
   embed +
-  perPage + order;
+  perPage +
+  order;
 
 const corsFixUrl = "https://noroffcors.herokuapp.com/" + postsUrl;
 
@@ -22,11 +23,11 @@ async function fetchPosts() {
     console.log(results);
 
     postWrapper.innerHTML = "";
-    
+
     for (let i = 0; i < results.length; i++) {
       if (i >= 8 && document.title === "home-page") {
-           break;
-           }
+        break;
+      }
       //fetch number of comments
       const repliesArray = results[i]._embedded.replies;
 
@@ -98,8 +99,6 @@ async function fetchPosts() {
      </div>
      `;
 
-     
-
         if (results[i].tags.length > 1 && document.title === "home-page") {
           // if (i >= 4 && document.title === "home-page") {
           //   break;
@@ -137,26 +136,31 @@ async function fetchPosts() {
 fetchPosts();
 
 //load more button
-// const postLoader = document.querySelector("#load-button");
 
-// let currentPosts = 10;
+const postLoader = document.querySelector("#load-button");
 
-// function loadMorePosts(event) {
-//   const postList = [
-//     ...document.querySelectorAll(".post-wrapper .post-container"),
-//   ];
+let currentPosts = 10;
 
-//   for (let u = currentPosts; u < currentPosts + 2; u++) {
-//     if (postList[u]) {
-//       postList[u].style.display = "block";
-//     }
-//   }
+if (document.title !== "home-page") {
+  function loadMorePosts(event) {
+    const postList = [
+      ...document.querySelectorAll(".post-wrapper .post-container"),
+    ];
 
-//   currentPosts += 2;
+    for (let u = currentPosts; u < currentPosts + 2; u++) {
+      if (postList[u]) {
+        postList[u].style.display = "block";
+      }
+    }
 
-//   if (currentPosts >= postList.length) {
-//     event.target.style.display = "none";
-//   }
-// }
+    currentPosts += 2;
 
-// postLoader.addEventListener("click", loadMorePosts);
+    if (currentPosts >= postList.length) {
+      event.target.style.display = "none";
+    }
+  }
+
+  postLoader.addEventListener("click", loadMorePosts);
+}
+
+

@@ -18,13 +18,13 @@ const embed = "?_embed";
 specificPostUrl =
   "http://7oiden.com/passionate-photography/wp-json/wp/v2/posts/" + id + embed;
 
-// const corsFix = "https://noroffcors.herokuapp.com/" + specificPostUrl;
+const corsFixSpecific = "https://noroffcors.herokuapp.com/" + specificPostUrl;
 
 console.log(specificPostUrl);
 
 async function fetchSpecific() {
   try {
-    const response = await fetch(specificPostUrl);
+    const response = await fetch(corsFixSpecific);
     const details = await response.json();
 
     console.log(details);

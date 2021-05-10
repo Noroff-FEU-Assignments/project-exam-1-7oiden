@@ -83,7 +83,9 @@ async function fetchPosts() {
     }
 
     for (let j = 0; j < results.length; j++) {
-      
+      if (j >= 4) {
+        break;
+      }
       recentPosts.innerHTML += `
       <li><a href="specific_post.html?id=${results[j].id}">${results[j].title.rendered}</a></li>
       `;
