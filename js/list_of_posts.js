@@ -22,8 +22,7 @@ async function fetchPosts() {
     console.log(results);
 
     postWrapper.innerHTML = "";
-    featureWrapper.innerHTML = "";
-
+    
     for (let i = 0; i < results.length; i++) {
       //fetch number of comments
       const repliesArray = results[i]._embedded.replies;
@@ -96,10 +95,13 @@ async function fetchPosts() {
      </div>
      `;
 
+     
+
         if (results[i].tags.length > 1 && document.title === "home-page") {
           // if (i >= 4 && document.title === "home-page") {
           //   break;
           // }
+          featureWrapper.innerHTML = "";
 
           featureWrapper.innerHTML += `
       <div class="feature-container">

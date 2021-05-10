@@ -84,8 +84,8 @@ section {
 }
 .feature-image {
   margin: 0 2rem 2rem 0;
-  width: 524px;
-  height: 324px;
+  width: 306px;
+  height: 188px;
 }
 .feature-text {
   margin-top: 0;
@@ -101,17 +101,15 @@ section {
 }
 /* carousel */
 .slideshow {
-  border: 2px solid grey;
-  height: 600px;
+  height: 900px;
   overflow: hidden;
 }
 /* slider */
 .post-wrapper {
-  display: flex;
   height: 100%;
-  width: 600%;
-  border: 1px solid red;
+  width: 900%;
   transition: all 0.3s;
+  display: flex;
 }
 /* .post-wrapper {
   display: grid;
@@ -121,27 +119,9 @@ section {
 } */
 /* section */
 .post-container {
-  display: none;
   flex-basis: 100%;
 }
-.post-container:nth-child(1) {
-  display: block;
-}
-.post-container:nth-child(2) {
-  display: block;
-}
-.post-container:nth-child(3) {
-  display: block;
-}
-.post-container:nth-child(4) {
-  display: block;
-}
-.post-container:nth-child(5) {
-  display: block;
-}
-.post-container:nth-child(6) {
-  display: block;
-}
+
 #post-divider {
   display: none;
 }
@@ -152,7 +132,6 @@ section {
 .post-text {
   margin-top: 0;
   height: 150px;
-  width: 300px;
   overflow: hidden;
 }
 .post-image {
@@ -283,10 +262,6 @@ h4 {
   .feature-wrapper {
     flex-direction: row;
   }
-  /* .post-wrapper {
-    grid-template-rows: auto;
-    grid-template-columns: auto auto auto auto auto auto;
-  } */
   h2,
   h3 {
     font-size: 1.375rem;
@@ -294,8 +269,29 @@ h4 {
   h4 {
     margin-top: 0;
   }
+  .feature-image {
+    width: 524px;
+    height: 324px;
+  }
   .feature-text {
     max-width: 80%;
+  }
+  /* container */
+  .slideshow-container {
+    width: 100%;
+    margin: 0 auto;
+  }
+  /* carousel */
+  .slideshow {
+    height: 450px;
+    overflow: hidden;
+  }
+  /* slider */
+  .post-wrapper {
+    height: 100%;
+    width: 600%;
+    transition: all 0.3s;
+    display: flex;
   }
   .post-text {
     max-width: 90%;
@@ -341,11 +337,11 @@ h4 {
     margin-right: 2rem;
   }
   .content-container {
-    flex: 2;
+    width: 66.666666%;
     /* background-color: darkorange; */
   }
 }
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1660px) {
   .main-container {
     background-image: url("../images/main_background_image-crop.jpg");
     background-size: cover;
@@ -362,7 +358,7 @@ h4 {
     margin-top: 380px;
   }
   .content-container {
-    flex: 3;
+    width: 75%;
   }
   /* .post-container {
     margin: 0 auto;
@@ -370,6 +366,10 @@ h4 {
   .feature-image {
     width: 524px;
     height: 324px;
+  }
+  /* carousel */
+  .slideshow {
+    height: 600px;
   }
   .post-image {
     width: 492px;
