@@ -10,13 +10,13 @@ const postsUrl =
   embed +
   perPage + order;
 
-// const corsEnabledUrl = "https://noroffcors.herokuapp.com/" + postsUrl;
+const corsFixUrl = "https://noroffcors.herokuapp.com/" + postsUrl;
 
 //console.log(postsUrl);
 
 async function fetchPosts() {
   try {
-    const response = await fetch(postsUrl);
+    const response = await fetch(corsFixUrl);
     const results = await response.json();
 
     console.log(results);

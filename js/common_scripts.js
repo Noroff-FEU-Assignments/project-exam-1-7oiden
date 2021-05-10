@@ -59,13 +59,13 @@ const featuredPosts = document.querySelector(".featured-posts-list");
 const recentPostsUrl =
   "http://7oiden.com/passionate-photography/wp-json/wp/v2/posts/?_embed&per_page=12&orderby=date";
 
-// const corsEnabledUrl = "https://noroffcors.herokuapp.com/" + postsUrl;
+const corsFix = "https://noroffcors.herokuapp.com/" + recentPostsUrl;
 
 //console.log(postsUrl);
 
 async function fetchPosts() {
   try {
-    const response = await fetch(recentPostsUrl);
+    const response = await fetch(corsFix);
     const results = await response.json();
 
     //console.log(results);
