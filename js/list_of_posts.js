@@ -3,8 +3,12 @@ const featureWrapper = document.querySelector(".feature-wrapper");
 
 const embed = "?_embed";
 
+const perPage = "&per_page=12";
+
 const postsUrl =
-  "http://7oiden.com/passionate-photography/wp-json/wp/v2/posts/" + embed;
+  "http://7oiden.com/passionate-photography/wp-json/wp/v2/posts/" +
+  embed +
+  perPage;
 
 // const corsEnabledUrl = "https://noroffcors.herokuapp.com/" + postsUrl;
 
@@ -18,11 +22,9 @@ async function fetchPosts() {
     console.log(results);
 
     postWrapper.innerHTML = "";
+    featureWrapper.innerHTML = "";
 
     for (let i = 0; i < results.length; i++) {
-      if (i >= 4 && document.title === "home-page") {
-        break;
-      }
       //fetch number of comments
       const repliesArray = results[i]._embedded.replies;
 
@@ -47,7 +49,7 @@ async function fetchPosts() {
 
       if (categoriesArray.length === 0) {
         categoryName = "Unspecified";
-        console.log(categoryName);
+        //console.log(categoryName);
       } else {
         switch (category) {
           case 6:
@@ -95,6 +97,10 @@ async function fetchPosts() {
      `;
 
         if (results[i].tags.length > 1 && document.title === "home-page") {
+          // if (i >= 4 && document.title === "home-page") {
+          //   break;
+          // }
+
           featureWrapper.innerHTML += `
       <div class="feature-container">
      <a href="specific_post.html?id=${results[i].id}">
@@ -126,26 +132,26 @@ async function fetchPosts() {
 fetchPosts();
 
 //load more button
-const postLoader = document.querySelector("#load-button");
+// const postLoader = document.querySelector("#load-button");
 
-let currentPosts = 4;
+// let currentPosts = 10;
 
-function loadMorePosts(event) {
-  const postList = [
-    ...document.querySelectorAll(".post-wrapper .post-container"),
-  ];
+// function loadMorePosts(event) {
+//   const postList = [
+//     ...document.querySelectorAll(".post-wrapper .post-container"),
+//   ];
 
-  for (let u = currentPosts; u < currentPosts + 2; u++) {
-    if (postList[u]) {
-      postList[u].style.display = "block";
-    }
-  }
+//   for (let u = currentPosts; u < currentPosts + 2; u++) {
+//     if (postList[u]) {
+//       postList[u].style.display = "block";
+//     }
+//   }
 
-  currentPosts += 2;
+//   currentPosts += 2;
 
-  if (currentPosts >= postList.length) {
-    event.target.style.display = "none";
-  }
-}
+//   if (currentPosts >= postList.length) {
+//     event.target.style.display = "none";
+//   }
+// }
 
-postLoader.addEventListener("click", loadMorePosts);
+// postLoader.addEventListener("click", loadMorePosts);

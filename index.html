@@ -110,7 +110,7 @@
               <div><hr /></div>
             </div>
             <div class="feature-wrapper">
-              
+              <div class="spinner"></div>
             </div>
           </section>
 
@@ -121,24 +121,36 @@
               <div><hr /></div>
             </div>
 
-            <!-- <div class="slideshow-container"> -->
-            <div class="post-wrapper">
-              <div class="spinner"></div>
+            <div class="slideshow-container">
+              <div class="slideshow">
+                <div class="post-wrapper">
+                  <div class="spinner"></div>
+                </div>
+              </div>
             </div>
 
             <div class="arrow-wrapper">
               <div><hr /></div>
-              <a href="" class="previous"
-                ><i class="fas fa-chevron-circle-left"></i
-              ></a>
+              <div class="previous">
+                <i class="fas fa-chevron-circle-left"></i>
+              </div>
+
+              <ul class="circle-wrapper">
+                <li class="circle selected"></li>
+                <li class="circle"></li>
+                <li class="circle"></li>
+              </ul>
+
+              <!-- <div class="circle selected"></div>
               <div class="circle"></div>
-              <div class="circle"></div>
-              <div class="circle"></div>
-              <a href="" class="next"
-                ><i class="fas fa-chevron-circle-right"></i
-              ></a>
+              <div class="circle"></div> -->
+
+              <div href="" class="next">
+                <i class="fas fa-chevron-circle-right"></i>
+              </div>
               <div><hr /></div>
             </div>
+
             <div class="post-link">
               <a class="button" href="list_of_posts.html">Go to all posts</a>
             </div>
@@ -249,8 +261,8 @@
         <p>Christopher Duvall - 2021</p>
       </div>
     </footer>
-    <!-- <script src="js/index.js"></script> -->
     <script src="js/list_of_posts.js"></script>
+    <script src="js/index.js"></script>
     <script src="js/common_scripts.js"></script>
     <script src="js/components/error.js"></script>
   </body>

@@ -55,6 +55,24 @@ h4 {
 .post-container:nth-child(4) {
   display: block;
 }
+.post-container:nth-child(5) {
+  display: block;
+}
+.post-container:nth-child(6) {
+  display: block;
+}
+.post-container:nth-child(7) {
+  display: block;
+}
+.post-container:nth-child(8) {
+  display: block;
+}
+.post-container:nth-child(9) {
+  display: block;
+}
+.post-container:nth-child(10) {
+  display: block;
+}
 .post-image {
   width: 306px;
   height: 188px;
