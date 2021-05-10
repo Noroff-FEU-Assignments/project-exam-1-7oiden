@@ -110,11 +110,13 @@ const commentWrapper = document.querySelector(".comment-wrapper");
 const commentUrl =
   "http://7oiden.com/passionate-photography/wp-json/wp/v2/comments?post=" + id;
 
+const corsFixComments = "https://noroffcors.herokuapp.com/" + commentUrl;
+
 console.log(commentUrl);
 
 async function fetchComments() {
   try {
-    const response = await fetch(commentUrl);
+    const response = await fetch(corsFixComments);
     const comments = await response.json();
 
     //console.log(comments);

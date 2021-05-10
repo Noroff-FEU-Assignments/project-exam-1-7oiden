@@ -162,5 +162,3 @@ if (document.title !== "home-page") {
 
   postLoader.addEventListener("click", loadMorePosts);
 }
-
-
