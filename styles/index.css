@@ -75,8 +75,6 @@ h1 {
   width: 85%;
   margin: 0 auto;
 }
-section {
-}
 .feature-wrapper {
   display: flex;
   flex-direction: column;
@@ -96,20 +94,22 @@ section {
 }
 /* container */
 .slideshow-container {
-  width: 100%;
+  max-width: 100%;
   margin: 0 auto;
 }
 /* carousel */
 .slideshow {
-  height: 900px;
+  height: 430px;
   overflow: hidden;
 }
 /* slider */
 .post-wrapper {
   height: 100%;
-  width: 900%;
+  width: 400%;
   transition: all 0.3s;
   display: flex;
+  /* border: 1px solid red; */
+  /* transform: translate(-0%); */
 }
 /* .post-wrapper {
   display: grid;
@@ -120,6 +120,7 @@ section {
 /* section */
 .post-container {
   flex-basis: 100%;
+  display: flex;
 }
 
 #post-divider {
@@ -135,6 +136,7 @@ section {
   overflow: hidden;
 }
 .post-image {
+  display: block;
   width: 306px;
   height: 188px;
   margin: 0 0 1rem 0;
@@ -205,14 +207,14 @@ h4 {
   height: 1rem;
   width: 1rem;
   border-radius: 50%;
-  background-color: var(--navy);
+  background-color: transparent;
   border: 3px solid var(--navy);
   margin-right: 5px;
   margin-left: 5px;
   cursor: pointer;
 }
 .selected {
-  background-color: transparent;
+  background-color: var(--navy);
 }
 .previous,
 .next {
@@ -258,6 +260,11 @@ h4 {
 
 /* styles that change
 --------------------*/
+@media only screen and (min-width: 360px) {
+  .slideshow-container {
+    width: 90%;
+  }
+}
 @media only screen and (min-width: 768px) {
   .feature-wrapper {
     flex-direction: row;
@@ -279,19 +286,9 @@ h4 {
   /* container */
   .slideshow-container {
     width: 100%;
-    margin: 0 auto;
   }
   /* carousel */
   .slideshow {
-    height: 450px;
-    overflow: hidden;
-  }
-  /* slider */
-  .post-wrapper {
-    height: 100%;
-    width: 600%;
-    transition: all 0.3s;
-    display: flex;
   }
   .post-text {
     max-width: 90%;
@@ -369,7 +366,7 @@ h4 {
   }
   /* carousel */
   .slideshow {
-    height: 600px;
+    height: 550px;
   }
   .post-image {
     width: 492px;

@@ -2,13 +2,13 @@ const postWrapper = document.querySelector(".post-wrapper");
 const featureWrapper = document.querySelector(".feature-wrapper");
 
 const embed = "?_embed";
-
 const perPage = "&per_page=12";
+const order = "&orderby=date";
 
 const postsUrl =
   "http://7oiden.com/passionate-photography/wp-json/wp/v2/posts/" +
   embed +
-  perPage;
+  perPage + order;
 
 // const corsEnabledUrl = "https://noroffcors.herokuapp.com/" + postsUrl;
 
@@ -24,6 +24,9 @@ async function fetchPosts() {
     postWrapper.innerHTML = "";
     
     for (let i = 0; i < results.length; i++) {
+      if (i >= 8 && document.title === "home-page") {
+           break;
+           }
       //fetch number of comments
       const repliesArray = results[i]._embedded.replies;
 

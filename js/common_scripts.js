@@ -57,7 +57,7 @@ const recentPosts = document.querySelector(".recent-posts-list");
 const featuredPosts = document.querySelector(".featured-posts-list");
 
 const recentPostsUrl =
-  "http://7oiden.com/passionate-photography/wp-json/wp/v2/posts/?_embed&per_page=12";
+  "http://7oiden.com/passionate-photography/wp-json/wp/v2/posts/?_embed&per_page=12&orderby=date";
 
 // const corsEnabledUrl = "https://noroffcors.herokuapp.com/" + postsUrl;
 
@@ -83,9 +83,7 @@ async function fetchPosts() {
     }
 
     for (let j = 0; j < results.length; j++) {
-      if (j >= 4) {
-        break;
-      }
+      
       recentPosts.innerHTML += `
       <li><a href="specific_post.html?id=${results[j].id}">${results[j].title.rendered}</a></li>
       `;
