@@ -131,7 +131,7 @@ async function fetchComments() {
 
       commentWrapper.innerHTML += `
        <div class="comment-container">
-       <figure class="comment-image"><img class="comment-image" src="${comments[i].author_avatar_urls[96]}"/> </figure>
+       <figure class="comment-image"><img class="comment-image" src="${comments[i].author_avatar_urls[96]}" alt="image of a generic avatar"/> </figure>
        <div>
        <div class="info-container"> </div>
        <h4>${comments[i].author_name}</h4>

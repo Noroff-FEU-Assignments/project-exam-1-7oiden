@@ -47,6 +47,9 @@ textarea {
 #message-error {
   visibility: hidden;
 }
+/* .success-message {
+  transition: all 0.5s;
+} */
 #success-message {
   color: green;
 }
