@@ -120,16 +120,16 @@ async function fetchComments() {
     const response = await fetch(corsFixComments);
     const comments = await response.json();
 
-    //console.log(comments);
+    console.log(comments);
+    console.log(comments.length);
 
     commentWrapper.innerHTML = "";
 
-    for (let i = 0; i < comments.length; i++) {
-      //console.log(comments[i]);
-
-      //console.log(comments[i].author_avatar_urls[96]);
-
-      commentWrapper.innerHTML += `
+    if (comments.length === 0) {
+      commentWrapper.innerHTML = `<p class="comments-default">No comments yet - but feel free to leave one!</p>`;
+    } else {
+      for (let i = 0; i < comments.length; i++) {
+        commentWrapper.innerHTML += `
        <div class="comment-container">
        <figure class="comment-image"><img class="comment-image" src="${comments[i].author_avatar_urls[96]}" alt="image of a generic avatar"/> </figure>
        <div>
@@ -139,6 +139,7 @@ async function fetchComments() {
        <div class="comment-text">${comments[i].content.rendered} </div>
        </div>
        </div> `;
+      }
     }
   } catch (error) {
     console.log(error);
@@ -149,3 +150,86 @@ async function fetchComments() {
 }
 
 fetchComments();
+
+// comment form
+
+const commentForm = document.querySelector("#comment-form");
+
+const name = document.querySelector("#name");
+const commentEmail = document.querySelector("#comment-email");
+const comment = document.querySelector("#comment");
+
+const commentNameError = document.querySelector("#comment-name-error");
+const commentEmailError = document.querySelector("#comment-email-error");
+const commentError = document.querySelector("#comment-error");
+
+const commentButton = document.querySelector("#comment-button");
+
+const commentSent = document.querySelector(".comment-sent");
+
+function checkCommentInput() {
+  if (checkLength(name.value, 2)) {
+    commentNameError.style.visibility = "hidden";
+  } else {
+    commentNameError.style.visibility = "visible";
+  }
+  if (validateEmail(commentEmail.value)) {
+    commentEmailError.style.visibility = "hidden";
+  } else {
+    commentEmailError.style.visibility = "visible";
+  }
+  if (checkLength(comment.value, 4)) {
+    commentError.style.visibility = "hidden";
+  } else {
+    commentError.style.visibility = "visible";
+  }
+}
+
+name.addEventListener("keyup", checkCommentInput);
+commentEmail.addEventListener("keyup", checkCommentInput);
+comment.addEventListener("keyup", checkCommentInput);
+
+function validateCommentForm(event) {
+  event.preventDefault();
+
+  if (checkLength(name.value, 2)) {
+    commentNameError.style.visibility = "hidden";
+  } else {
+    commentNameError.style.visibility = "visible";
+  }
+  if (validateEmail(commentEmail.value)) {
+    commentEmailError.style.visibility = "hidden";
+  } else {
+    commentEmailError.style.visibility = "visible";
+  }
+  if (checkLength(comment.value, 4)) {
+    commentError.style.visibility = "hidden";
+  } else {
+    commentError.style.visibility = "visible";
+  }
+  if (
+    checkLength(name.value, 2) &&
+    validateEmail(commentEmail.value) &&
+    checkLength(comment.value, 4)
+  ) {
+    commentSent.innerHTML = `
+    <p id="success-message"><strong>Thank you for your comment!</strong> 
+    The comment is sent for approval, and will normally appear within a day.</p>`;
+  }
+}
+
+commentForm.addEventListener("submit", validateCommentForm);
+
+function checkLength(value, len) {
+  if (value.trim().length > len) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function validateEmail(contactEmail) {
+  const regEx = /\S+@\S+\.\S+/;
+  const patternMatches = regEx.test(contactEmail);
+  return patternMatches;
+}

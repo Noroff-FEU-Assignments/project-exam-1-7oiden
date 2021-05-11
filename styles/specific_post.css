@@ -22,7 +22,8 @@ section a {
 .post-text {
 }
 h1,
-h3 {
+h3,
+h4 {
   font-family: var(--century-gothic);
   color: var(--black);
   font-size: 1.25rem;
@@ -90,6 +91,13 @@ figcaption {
 .comments {
   margin-bottom: 2rem;
 }
+.comments-default {
+  color: var(--navy);
+  display: block;
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: var(--light-grey);
+}
 .comment-container {
   display: flex;
   color: black;
@@ -102,12 +110,8 @@ figcaption {
   width: 100px;
   margin: 0 1rem 0 0;
 }
-h3 {
+h3, h4 {
   margin: 0;
-}
-h4 {
-  margin: 0;
-  font-size: 1.125rem;
 }
 .comment-text {
   margin: 0;
@@ -133,35 +137,71 @@ h4 {
   margin-bottom: 5px;
   text-transform: uppercase;
 }
-/* loading styles */
-/* .error {
-  color: white;
-  font-size: 1.125rem;
-  padding: 1rem 2rem 1rem 2rem;
-  background-color: #be3e35;
-  text-align: center;
-  max-width: 700px;
-  margin: 50px auto;
-  padding: 30px;
-  border-radius: 10px;
+/* comment-form */
+#comment-divider {
+  margin-top: 4rem;
 }
-.spinner {
-  border: 8px solid #5c73f240;
-  border-top: 8px solid #5c73f2;
-  margin: 50px 0;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  animation: spin 1s ease-in-out infinite;
+.leave-comment {
+  background-color: var(--light-grey);
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  margin-top: 2rem;
 }
-@keyframes spin {
+#comment-form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 450px;
+  margin: 0 auto;
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+.comment-input {
+  color: var(--navy);
+  padding: 0.5rem;
+  border: 3px solid var(--light-blue);
+  outline: none;
+}
+#comment-button {
+  margin-top: 3rem;
+}
+#comment {
+  height: 150px;
+  font-family: var(--open-sans);
+  font-size: 1rem;
+}
+.comment-error {
+  font-size: 0.875rem;
+  text-align: left;
+  color: red;
+  visibility: hidden;
+}
+.comment-error:before {
+  content: "\002A";
+}
+#success-message {
+  color: green;
+  animation: 1s fadeIn;
+  animation-fill-mode: forwards;
+}
+#success-message:before {
+  content: "\2713";
+  font-size: 1.5rem;
+  margin-right: 3px;
+}
+@keyframes fadeIn {
   0% {
-    transform: rotate(0deg);
+    opacity: 0;
   }
   100% {
-    transform: rotate(360deg);
+    visibility: visible;
+    opacity: 1;
   }
-} */
+}
+
 /* styles that change
 --------------------*/
 @media only screen and (min-width: 768px) {
@@ -180,7 +220,7 @@ h4 {
   }
   .post-text {
     max-width: 90%;
-}
+  }
 }
 @media only screen and (min-width: 1200px) {
   .content-wrapper {
@@ -198,13 +238,16 @@ h4 {
   h2 {
     font-size: 1.5rem;
   }
-  h3 {
+  h3,
+  h4 {
     font-size: 1.5rem;
   }
   .info-container p {
     font-size: 1rem;
   }
- 
+  .comments-default {
+    font-size: 1.25rem;
+  }
 }
 @media only screen and (min-width: 1600px) {
   .blog-wrapper {

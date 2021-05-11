@@ -247,7 +247,8 @@ input[placeholder] {
 label {
   font-size: 1rem;
   text-align: left;
-  color: black;
+  color: var(--navy);
+  margin-bottom: 3px;
 }
 .error-message {
   font-size: 0.875rem;
@@ -279,9 +280,20 @@ button:hover {
   opacity: 0.75;
   box-shadow: none;
 }
-.subscribe-message {
+#subscribe-message {
   color: green;
   margin: 0;
+  animation: 1s fadeIn;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 #subscribe-message:before {
   content: "\2713";

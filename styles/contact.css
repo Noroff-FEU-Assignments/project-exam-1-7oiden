@@ -47,16 +47,24 @@ textarea {
 #message-error {
   visibility: hidden;
 }
-/* .success-message {
-  transition: all 0.5s;
-} */
 #success-message {
   color: green;
+  animation: 1s fadeIn;
+  animation-fill-mode: forwards;
 }
 #success-message:before {
   content: "\2713";
   font-size: 1.5rem;
   margin-right: 3px;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 /* styles that change
