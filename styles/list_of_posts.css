@@ -22,7 +22,7 @@ h1 {
   font-size: 1.25rem;
   font-weight: 400;
 }
-h4 {
+h2 {
   font-family: var(--adobe-caslon);
   font-size: 1.25rem;
   text-decoration: underline;
@@ -33,6 +33,12 @@ h4 {
 .divider {
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+.post-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 306px;
+  margin: 0 auto;
 }
 .post-text {
   margin-top: 0;
@@ -91,9 +97,7 @@ h4 {
   font-size: 0.875rem;
   font-weight: 800;
   padding: 0;
-  margin-top: 0;
-  margin-right: 5px;
-  margin-bottom: 5px;
+  margin: 0 5px 0 0;
   text-transform: uppercase;
 }
 #post-divider {
@@ -104,39 +108,6 @@ h4 {
   margin-top: 0;
   margin-bottom: 4rem;
 }
-/* loading styles */
-/* .post-loader {
-  text-align: center;
-  margin: 3rem auto 3rem auto;
-}
-.error {
-  color: white;
-  font-size: 1.125rem;
-  padding: 1rem 2rem 1rem 2rem;
-  background-color: #be3e35;
-  text-align: center;
-  max-width: 700px;
-  margin: 50px auto;
-  padding: 30px;
-  border-radius: 10px;
-}
-.spinner {
-  border: 8px solid #5c73f240;
-  border-top: 8px solid #5c73f2;
-  margin: 50px 0;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  animation: spin 1s ease-in-out infinite;
-}
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-} */
 
 /* styles that change
 --------------------*/
@@ -145,6 +116,7 @@ h4 {
     font-size: 1.375rem;
   }
   .post-wrapper {
+    width: auto;
     display: grid;
     grid-template-rows: auto auto auto auto;
     grid-template-columns: auto auto;
@@ -152,7 +124,12 @@ h4 {
     /* background-color: darkorange; */
   }
   .post-text {
-    max-width: 90%;
+    max-width: 306px;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .post-wrapper {
+    gap: 25px;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -176,15 +153,28 @@ h4 {
   }
   .post-wrapper {
     display: flex;
+    width: 70%;
     flex-direction: column;
     margin: 0 auto;
-    /* background-color: darkorange; */
-  }
-  .post-container {
-    width: 70%;
   }
   .post-image {
     width: 524px;
     height: 324px;
+  }
+  .post-text {
+    max-width: 524px;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  .line-wrapper {
+    width: 100%;
+  }
+.post-wrapper {
+    width: auto;
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: auto auto;
+    gap: 50px;
+    /* background-color: darkorange; */
   }
 }

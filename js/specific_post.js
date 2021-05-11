@@ -96,9 +96,9 @@ function createHtml(details) {
      <h2>${details.title.rendered}</h2>
      <div class="info-container">
     <p>${categoryName}</p>
-     <p>/</p>
+     <p>|</p>
      <p>${details.formatted_date}</p>
-     <p>/</p>
+     <p>|</p>
      <p>${numReplies} comments</p>
      </div>
      <div class="post-text">${details.content.rendered}</div>
@@ -133,10 +133,9 @@ async function fetchComments() {
        <div class="comment-container">
        <figure class="comment-image"><img class="comment-image" src="${comments[i].author_avatar_urls[96]}" alt="image of a generic avatar"/> </figure>
        <div>
-       <div class="info-container"> </div>
-       <h4>${comments[i].author_name}</h4>
+       <p id="comment-author">${comments[i].author_name}</p>
        <div class="info-container"><p>${comments[i].date}</p></div>
-       <div class="comment-text">${comments[i].content.rendered} </div>
+       <p id="comment-text">${comments[i].content.rendered}</p>
        </div>
        </div> `;
       }

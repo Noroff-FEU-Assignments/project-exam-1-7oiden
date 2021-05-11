@@ -85,12 +85,12 @@ async function fetchPosts() {
      <figure class="post-image">
      <img class="post-image" src="${mediaArray[j].source_url}"/>
      </figure>
-     <h4>${results[i].title.rendered}</h4>
+     <h2>${results[i].title.rendered}</h2>
      <div class="info-container">
      <p>${categoryName}</p>
-     <p>/</p>
+     <p>|</p>
      <p>${results[i].formatted_date}</p>
-     <p>/</p>
+     <p>|</p>
      <p>${numReplies} comments</p>
      </div>
      <div class="post-text">${results[i].content.rendered}</div>

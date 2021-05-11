@@ -48,18 +48,15 @@ h2 {
 }
 .info-container {
   display: flex;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0;
   padding: 0;
 }
 .info-container p {
-  padding-right: 10px;
   color: #5e7c88;
   font-size: 0.875rem;
   font-weight: 800;
   padding: 0;
-  margin-top: 5px;
-  margin-right: 5px;
+  margin-right: 10px;
   margin-bottom: 0;
   text-transform: uppercase;
 }
@@ -92,6 +89,7 @@ figcaption {
   margin-bottom: 2rem;
 }
 .comments-default {
+  font-family: var(--open-sans);
   color: var(--navy);
   display: block;
   margin-top: 2rem;
@@ -110,10 +108,8 @@ figcaption {
   width: 100px;
   margin: 0 1rem 0 0;
 }
-h3, h4 {
-  margin: 0;
-}
-.comment-text {
+h3,
+h4 {
   margin: 0;
 }
 #comment-line {
@@ -164,6 +160,16 @@ h3, h4 {
   padding: 0.5rem;
   border: 3px solid var(--light-blue);
   outline: none;
+}
+#comment-author {
+  padding: 0;
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+#comment-text {
+  padding: 0;
+  margin: 0;
 }
 #comment-button {
   margin-top: 3rem;
@@ -248,6 +254,10 @@ h3, h4 {
   .comments-default {
     font-size: 1.25rem;
   }
+  .post-image {
+    width: 622px;
+    height: 384px;
+  }
 }
 @media only screen and (min-width: 1600px) {
   .blog-wrapper {
@@ -259,5 +269,9 @@ h3, h4 {
   }
   .line-wrapper {
     width: 100%;
+  }
+  .post-image {
+    width: 720px;
+    height: 445px;
   }
 }
