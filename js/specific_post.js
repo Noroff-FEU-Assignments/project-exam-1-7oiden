@@ -89,9 +89,10 @@ function createHtml(details) {
     }
   }
   postContainer.innerHTML = `
-  <figure class="post-image">
-     <img class="post-image" src="${details._embedded["wp:featuredmedia"]["0"].source_url}"/>
+     <figure class="post-image">
+     <img class="post-image" src="${details._embedded["wp:featuredmedia"]["0"].source_url}" alt="${details._embedded["wp:featuredmedia"]["0"].alt_text}"/>
      </figure>
+     <figcaption> ${details._embedded["wp:featuredmedia"]["0"].caption.rendered}</figcaption>
      <h2>${details.title.rendered}</h2>
      <div class="info-container">
     <p>${categoryName}</p>

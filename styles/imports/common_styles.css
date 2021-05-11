@@ -93,7 +93,7 @@ nav.menu {
   padding: 0;
 }
 .mobile-menu ul li {
-  padding-top: 0.5rem;
+  padding-top: 1rem;
   font-size: 1.125rem;
 }
 .mobile-menu ul li a {
@@ -290,13 +290,13 @@ button:hover {
 }
 #search-icon {
   position: absolute;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color: var(--navy);
-  top: 0.5rem;
+  top: 8px;
   left: 0.5rem;
 }
 input[type="search"] {
-  padding-left: 3rem;
+  padding-left: 2rem;
   margin-bottom: 2rem;
 }
 

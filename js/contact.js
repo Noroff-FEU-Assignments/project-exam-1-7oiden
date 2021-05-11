@@ -22,17 +22,17 @@ function checkContactInput() {
   } else {
     nameError.style.visibility = "visible";
   }
-   if (validateEmail(contactEmail.value)) {
-     contactEmailError.style.visibility = "hidden";
-   } else {
-     contactEmailError.style.visibility = "visible";
-   }
+  if (validateEmail(contactEmail.value)) {
+    contactEmailError.style.visibility = "hidden";
+  } else {
+    contactEmailError.style.visibility = "visible";
+  }
   if (checkLength(subject.value, 15)) {
     subjectError.style.visibility = "hidden";
   } else {
     subjectError.style.visibility = "visible";
   }
- 
+
   if (checkLength(message.value, 25)) {
     messageError.style.visibility = "hidden";
   } else {

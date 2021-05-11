@@ -42,7 +42,7 @@ h1 {
   box-shadow: 0 6px 12px #00000029;
 }
 .quote {
-  margin: 280px auto 0 auto;
+  margin: 230px auto 0 auto;
   background-color: #00000066;
   padding: 0.5rem 1rem 1rem 1rem;
 }
@@ -59,9 +59,10 @@ h1 {
 }
 .quote p:nth-child(3) {
   font-family: var(--open-sans);
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-style: normal;
   margin-top: 10px;
+  color: var(--gold);
 }
 .content-wrapper {
   width: 100%;
@@ -86,6 +87,7 @@ h1 {
   height: 188px;
 }
 .feature-text {
+  display: block;
   margin-top: 0;
   margin-bottom: 0;
   height: 200px;
@@ -131,9 +133,11 @@ h1 {
   pointer-events: all;
 }
 .post-text {
+  display: block;
   margin-top: 0;
   height: 150px;
   overflow: hidden;
+  /* background-color: violet; */
 }
 .post-image {
   display: block;
@@ -266,6 +270,14 @@ h4 {
   }
 }
 @media only screen and (min-width: 768px) {
+  .main-container {
+    background-image: url("../images/main_background_image_tablet.jpg");
+    background-size: contain;
+    height: 952px;
+  }
+  .quote {
+    margin-top: 480px;
+  }
   .feature-wrapper {
     flex-direction: row;
   }
@@ -306,7 +318,7 @@ h4 {
     margin-top: 100px;
   }
   .quote {
-    margin-top: 200px;
+    margin-top: 220px;
   }
   .quote p {
     font-size: 1.5rem;
@@ -315,7 +327,7 @@ h4 {
     font-size: 3rem;
   }
   .quote p:nth-child(3) {
-    font-size: 1.375rem;
+    font-size: 1.25rem;
   }
   .content-wrapper {
     flex-direction: row;
