@@ -52,6 +52,7 @@ blockquote {
 }
 .info-container {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 }
@@ -88,7 +89,6 @@ blockquote {
   top: 0;
 }
 .info-container p {
-  padding-right: 10px;
   color: #5e7c88;
   font-size: 1rem;
   font-weight: bold;
@@ -117,10 +117,12 @@ em {
   padding-right: 4rem;
 }
 figcaption {
+  font-size: 0.875rem;
   display: block;
   margin-top: 0;
   padding-top: 0;
   margin-bottom: 1rem;
+  margin-left: 0.5rem;
   font-style: italic;
 }
 .comments {
@@ -331,7 +333,7 @@ h4 {
     font-size: 1.5rem;
   }
   .info-container p {
-    font-size: 1.125rem;
+    font-size: 1rem;
   }
   .comments-default {
     font-size: 1.25rem;
