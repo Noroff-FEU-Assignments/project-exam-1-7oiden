@@ -99,7 +99,7 @@ function createHtml(details) {
      </figure>
      <figcaption>Click image to enlarge</figcaption>
      <h2>${details.title.rendered}</h2>
-     <div class="info-container">
+     <div class="info-container" id="gradiant-border">
      <p>${categoryName}</p>
      <p>|</p>
      <p>${details.formatted_date}</p>

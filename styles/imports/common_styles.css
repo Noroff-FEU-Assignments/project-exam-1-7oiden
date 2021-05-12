@@ -210,12 +210,12 @@ h5 {
   border-radius: 10px;
 }
 .spinner {
-  border: 12px solid var(--light-blue);
-  border-top: 12px solid var(--navy);
+  border: 10px solid var(--light-blue);
+  border-top: 10px solid var(--navy);
   margin: 50px 0;
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   animation: spin 1s ease-in-out infinite;
 }
 @keyframes spin {
