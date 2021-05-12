@@ -96,7 +96,7 @@ h1 {
   display: block;
   margin-top: 0;
   margin-bottom: 0;
-  height: 200px;
+  height: 150px;
   max-width: 80%;
   overflow: hidden;
 }
@@ -137,15 +137,16 @@ h1 {
 #post-divider {
   display: none;
 }
-.view {
+/* .view {
   opacity: 1;
   pointer-events: all;
-}
+} */
 .post-text {
   display: block;
   margin-top: 0;
   height: 150px;
   overflow: hidden;
+  max-width: 306px;
   /* background-color: violet; */
 }
 .post-image {
@@ -242,7 +243,6 @@ h4 {
   color: var(--navy);
 }
 
-
 /* styles that change
 --------------------*/
 @media only screen and (min-width: 360px) {
@@ -262,7 +262,7 @@ h4 {
   .feature-wrapper {
     flex-direction: row;
   }
-   h1 {
+  h1 {
     font-size: 2.5rem;
   }
   h2,
@@ -282,9 +282,6 @@ h4 {
   .slideshow-container {
     width: 100%;
   }
-  .post-text {
-    max-width: 90%;
-  }
 }
 @media only screen and (min-width: 1200px) {
   .main-container {
@@ -299,7 +296,7 @@ h4 {
     margin-top: 100px;
   }
   .quote {
-    margin-top: 220px;
+    margin-top: 320px;
   }
   .quote p {
     font-size: 1.5rem;
@@ -364,6 +361,10 @@ h4 {
   .post-image {
     width: 492px;
     height: 304px;
+  }
+  .post-text {
+    max-width: 524px;
+    /* background-color: violet; */
   }
   h4 {
     font-size: 1.5rem;

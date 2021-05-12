@@ -199,13 +199,14 @@ h5 {
 /* loading styles */
 .error {
   color: white;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   padding: 1rem 2rem 1rem 2rem;
-  background-color: #be3e35;
+  background-color: #be3e35d9;
+  border: 8px solid #be3e35;
   text-align: center;
   max-width: 700px;
   margin: 50px auto;
-  padding: 30px;
+  padding: 40px;
   border-radius: 10px;
 }
 .spinner {
@@ -426,6 +427,7 @@ footer p {
   }
   .menu li {
     margin-left: 3rem;
+    margin-bottom: 3px;
   }
   .menu-item {
     color: var(--white);
