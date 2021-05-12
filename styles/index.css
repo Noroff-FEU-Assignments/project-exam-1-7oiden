@@ -238,7 +238,7 @@ h4 {
 --------------------*/
 @media only screen and (min-width: 360px) {
   .slideshow-container {
-    width: 90%;
+    width: 306px;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -267,12 +267,8 @@ h4 {
   .feature-text {
     max-width: 80%;
   }
-  /* container */
   .slideshow-container {
     width: 100%;
-  }
-  /* carousel */
-  .slideshow {
   }
   .post-text {
     max-width: 90%;

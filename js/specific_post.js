@@ -29,8 +29,6 @@ async function fetchSpecific() {
 
     console.log(details);
 
-    ////console.log(details._embedded["wp:featuredmedia"]["0"].source_url);
-
     document.title = `Passionate Photography | ${details.title.rendered}`;
 
     //console.log(details.categories[0]);
@@ -90,18 +88,24 @@ function createHtml(details) {
   }
   postContainer.innerHTML = `
      <figure class="post-image">
-     <img class="post-image" src="${details._embedded["wp:featuredmedia"]["0"].source_url}" alt="${details._embedded["wp:featuredmedia"]["0"].alt_text}"/>
+     <img class="post-image" id="my-image" src="${details._embedded["wp:featuredmedia"]["0"].source_url}" alt="${details._embedded["wp:featuredmedia"]["0"].alt_text}"/>
      </figure>
      <figcaption> ${details._embedded["wp:featuredmedia"]["0"].caption.rendered}</figcaption>
      <h2>${details.title.rendered}</h2>
      <div class="info-container">
-    <p>${categoryName}</p>
+     <p>${categoryName}</p>
      <p>|</p>
      <p>${details.formatted_date}</p>
      <p>|</p>
      <p>${numReplies} comments</p>
      </div>
      <div class="post-text">${details.content.rendered}</div>
+
+     <div class="modal">
+     <span class="close">x</span>
+     <img class="modal-content" id="img01">
+     <div> id="caption"></div>
+     </div>
  `;
 }
 
@@ -232,3 +236,31 @@ function validateEmail(contactEmail) {
   const patternMatches = regEx.test(contactEmail);
   return patternMatches;
 }
+
+//modal
+
+// const modal = document.querySelectorAll(".modal");
+
+// const img = document.querySelectorAll(".post-image");
+// const modalImg = document.querySelectorAll("#img01");
+// const captionText = document.querySelectorAll("#caption");
+
+// function openModal(event) {
+//   console.log(item);
+// }
+
+// document.querySelectorAll(".post-image").forEach((item) => {
+//   item.addEventListener("click", openModal);
+// });
+// img.forEach((item) => {
+//   item.addEventListener("click", (event) => {
+//     modal.style.display = "block";
+//     console.log("hi");
+//   });
+// });
+
+// img.onclick = function () {
+//   modal.style.display = "block";
+//   modalImg.src = this.src;
+//   captionText.innerHTML = this.alt;
+// };

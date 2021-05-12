@@ -80,12 +80,12 @@ async function fetchPosts() {
 
       for (let j = 0; j < mediaArray.length; j++) {
         postWrapper.innerHTML += `
-      <div class="post-container">
+    <div class="post-container">
      <a href="specific_post.html?id=${results[i].id}">
      <figure class="post-image">
      <img class="post-image" src="${mediaArray[j].source_url}"/>
      </figure>
-     <h2>${results[i].title.rendered}</h2>
+     <h4>${results[i].title.rendered}</h4>
      <div class="info-container">
      <p>${categoryName}</p>
      <p>|</p>
