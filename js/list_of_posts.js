@@ -2,7 +2,7 @@ const postWrapper = document.querySelector(".post-wrapper");
 const featureWrapper = document.querySelector(".feature-wrapper");
 
 const embed = "?_embed";
-const perPage = "&per_page=12";
+const perPage = "&per_page=15";
 const order = "&orderby=date";
 
 const postsUrl =

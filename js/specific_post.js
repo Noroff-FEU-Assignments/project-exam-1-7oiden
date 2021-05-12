@@ -5,6 +5,13 @@ const postImage = document.querySelector(".post-image");
 const postHeading = document.querySelector("h2");
 const contentText = document.querySelector(".post-text");
 
+const modal = document.querySelector(".modal");
+
+const modalImage = document.querySelector("#image");
+const captionText = document.querySelector("#caption");
+
+const span = document.getElementsByClassName("close")[0];
+
 const queryString = document.location.search;
 
 const params = new URLSearchParams(queryString);
@@ -90,7 +97,6 @@ function createHtml(details) {
      <figure class="post-image">
      <img class="post-image" id="my-image" src="${details._embedded["wp:featuredmedia"]["0"].source_url}" alt="${details._embedded["wp:featuredmedia"]["0"].alt_text}"/>
      </figure>
-     <figcaption> ${details._embedded["wp:featuredmedia"]["0"].caption.rendered}</figcaption>
      <h2>${details.title.rendered}</h2>
      <div class="info-container">
      <p>${categoryName}</p>
@@ -100,13 +106,25 @@ function createHtml(details) {
      <p>${numReplies} comments</p>
      </div>
      <div class="post-text">${details.content.rendered}</div>
-
-     <div class="modal">
-     <span class="close">x</span>
-     <img class="modal-content" id="img01">
-     <div> id="caption"></div>
-     </div>
  `;
+
+  document.addEventListener(
+    "click",
+    function (event) {
+      if (!event.target.matches(".post-image")) return;
+      {
+        console.log(modal);
+        modal.style.display = "block";
+        modalImage.src = `${details._embedded["wp:featuredmedia"]["0"].source_url}`;
+        captionText.innerHTML = `${details._embedded["wp:featuredmedia"]["0"].caption.rendered}`;
+      }
+    },
+    false
+  );
+
+  span.onclick = function () {
+    modal.style.display = "none";
+  }; 
 }
 
 //fetch comments
@@ -135,7 +153,7 @@ async function fetchComments() {
       for (let i = 0; i < comments.length; i++) {
         commentWrapper.innerHTML += `
        <div class="comment-container">
-       <figure class="comment-image"><img class="comment-image" src="${comments[i].author_avatar_urls[96]}" alt="image of a generic avatar"/> </figure>
+       <figure class="comment-image"><img id="myimg" class="comment-image" src="${comments[i].author_avatar_urls[96]}" alt="image of a generic avatar"/> </figure>
        <div>
        <p id="comment-author">${comments[i].author_name}</p>
        <div class="info-container"><p>${comments[i].date}</p></div>
@@ -239,28 +257,18 @@ function validateEmail(contactEmail) {
 
 //modal
 
-// const modal = document.querySelectorAll(".modal");
-
-// const img = document.querySelectorAll(".post-image");
-// const modalImg = document.querySelectorAll("#img01");
-// const captionText = document.querySelectorAll("#caption");
-
-// function openModal(event) {
-//   console.log(item);
-// }
-
-// document.querySelectorAll(".post-image").forEach((item) => {
-//   item.addEventListener("click", openModal);
-// });
-// img.forEach((item) => {
-//   item.addEventListener("click", (event) => {
-//     modal.style.display = "block";
+// document.addEventListener("click", function (e) {
+//   if (e.target && e.target.id == "#myimg") {
 //     console.log("hi");
-//   });
+//   }
 // });
 
-// img.onclick = function () {
-//   modal.style.display = "block";
-//   modalImg.src = this.src;
-//   captionText.innerHTML = this.alt;
-// };
+
+
+{
+  /* <div class="modal">
+     <span class="close">x</span>
+     <img class="modal-content" id="img01">
+     <div> id="caption"></div>
+     </div> */
+}
