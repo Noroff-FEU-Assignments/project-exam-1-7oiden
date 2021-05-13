@@ -2,10 +2,13 @@
 
 /* main
 --------------------*/
-
+main {
+  background-color: var(--light-grey);
+}
 .content-wrapper {
   display: flex;
   flex-direction: column;
+  background-color: white;
 }
 section {
   width: 85%;
@@ -20,7 +23,7 @@ h1 {
   font-weight: 400;
 }
 #contact-form {
-  background-color: var(--light-grey);
+  background-color: #d2d6d999;
   border: none;
   margin-bottom: 2rem;
   padding-right: 7.5%;
@@ -95,13 +98,14 @@ textarea {
 }
 @media only screen and (min-width: 900px) {
   #contact-form {
+    width: 85%;
     padding-right: 20%;
     padding-left: 20%;
   }
 }
 @media only screen and (min-width: 1200px) {
   .content-wrapper {
-    width: 85%;
+    width: 90%;
     flex-direction: row;
     margin: 0 auto;
     /* background-color: blueviolet; */

@@ -10,7 +10,6 @@ main {
   background-image: url("../images/main_background_image_mobile.jpg");
   background-size: contain;
   margin-top: 0;
-  margin-bottom: 2rem;
   text-align: center;
   height: 670px;
 }
@@ -68,18 +67,18 @@ h1 {
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
 }
 .content-container {
   background-color: var(--white);
   color: var(--black);
-  width: 85%;
+  width: 90%;
   margin: 0 auto;
 }
 .feature-wrapper {
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
+  margin-left: 5%;
 }
 .feature-container {
   transition: opacity 0.3s;
@@ -96,8 +95,8 @@ h1 {
   display: block;
   margin-top: 0;
   margin-bottom: 0;
-  height: 150px;
-  max-width: 80%;
+  height: 120px;
+  max-width: 100%;
   overflow: hidden;
 }
 /* container */
@@ -144,7 +143,7 @@ h1 {
 .post-text {
   display: block;
   margin-top: 0;
-  height: 150px;
+  height: 120px;
   overflow: hidden;
   max-width: 306px;
   /* background-color: violet; */
@@ -284,6 +283,9 @@ h4 {
   }
 }
 @media only screen and (min-width: 1200px) {
+  main {
+    background-color: var(--light-grey);
+  }
   .main-container {
     background-image: url("../images/main_background_image.jpg");
     background-size: cover;
@@ -309,22 +311,24 @@ h4 {
   }
   .content-wrapper {
     flex-direction: row;
-    width: 85%;
+    width: 90%;
+    margin: 0 auto;
     /* background-color: chartreuse; */
+  }
+  section {
+    width: 85%;
+    margin: 0 auto;
+    /* background-color: deeppink; */
   }
   h2,
   h3 {
     font-size: 1.75rem;
   }
   .featured {
-    margin-right: 2rem;
     /* background-color: crimson; */
   }
-  .recent-posts {
-    margin-right: 2rem;
-  }
   .content-container {
-    width: 66.666666%;
+    width: 70%;
     /* background-color: darkorange; */
   }
 }
@@ -333,7 +337,6 @@ h4 {
     background-image: url("../images/main_background_image-crop.jpg");
     background-size: cover;
     margin-top: 0;
-    margin-bottom: 2rem;
     text-align: center;
     width: 100%;
     height: 1000px;
@@ -345,14 +348,14 @@ h4 {
     margin-top: 380px;
   }
   .content-container {
-    width: 75%;
+    flex: 3;
   }
   /* .post-container {
     margin: 0 auto;
   } */
   .feature-image {
-    width: 524px;
-    height: 324px;
+    width: 720px;
+    height: 445px;
   }
   /* carousel */
   .slideshow {

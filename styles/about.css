@@ -2,10 +2,13 @@
 
 /* main
 --------------------*/
-
+main {
+  background-color: var(--light-grey);
+}
 .content-wrapper {
   display: flex;
   flex-direction: column;
+  background-color: white;
 }
 section {
   width: 85%;
@@ -76,7 +79,7 @@ figcaption {
 }
 @media only screen and (min-width: 1200px) {
   .content-wrapper {
-    width: 85%;
+    width: 90%;
     flex-direction: row;
     margin: 0 auto;
     /* background-color: blueviolet; */

@@ -111,9 +111,11 @@ nav.menu {
 --------------------*/
 /* breadcrumb */
 .breadcrumb {
-  width: 85%;
-  margin: 1rem auto;
+  width: 100%;
+  padding-top: 1rem;
+  padding-left: 5%;
   font-size: 0.875rem;
+  background-color: white;
 }
 .breadcrumb div {
   color: var(--navy);
@@ -153,7 +155,7 @@ hr {
 aside {
   color: var(--navy);
   background-color: var(--light-grey);
-  max-height: 1800px;
+  min-height: 100%;
 }
 .aside-container {
   width: 85%;
@@ -351,7 +353,6 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
   margin-bottom: 0;
 }
 footer div {
@@ -451,15 +452,18 @@ footer p {
 --------------------*/
   .breadcrumb {
     font-size: 1rem;
+    margin-left: 5%;
+    width: 60%;
   }
+  .line-wrapper {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
   .arrow {
     color: var(--navy);
     font-size: 1rem;
   }
   /* aside */
-  aside {
-    margin-left: 2rem;
-  }
   .aside-container {
     grid-template-rows: auto auto;
     grid-template-columns: auto;
@@ -473,6 +477,9 @@ footer p {
   nav.menu {
     flex-direction: row;
     align-items: center;
+  }
+  .breadcrumb {
+    width: 68%;
   }
   .line-wrapper {
     width: 70%;

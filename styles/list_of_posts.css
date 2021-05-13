@@ -2,13 +2,16 @@
 
 /* main
 --------------------*/
-
+main {
+  background-color: var(--light-grey);
+}
 .content-wrapper {
   display: flex;
   flex-direction: column;
+  background-color: white;
 }
 section {
-  width: 85%;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -30,6 +33,10 @@ h4 {
   margin-bottom: 0.5rem;
   /* background-color: aqua; */
 }
+.line-wrapper {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
 .divider {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -42,7 +49,7 @@ h4 {
 }
 .post-text {
   margin-top: 0;
-  height: 150px;
+  height: 120px;
   overflow: hidden;
 }
 .post-container {
@@ -128,7 +135,6 @@ h4 {
     grid-template-rows: auto auto auto auto;
     grid-template-columns: auto auto;
     gap: 25px;
-    /* background-color: darkorange; */
   }
   .post-text {
     max-width: 306px;
@@ -144,10 +150,9 @@ h4 {
     font-size: 1.75rem;
   }
   .content-wrapper {
-    width: 85%;
+    width: 90%;
     flex-direction: row;
     margin: 0 auto;
-    /* background-color: blueviolet; */
   }
   section {
     flex: 2;
@@ -156,7 +161,9 @@ h4 {
 @media only screen and (min-width: 1600px) {
   section {
     flex: 3;
-    /* background-color: blueviolet; */
+  }
+  .line-wrapper {
+    width: 95%;
   }
   .post-wrapper {
     display: flex;
@@ -173,15 +180,12 @@ h4 {
   }
 }
 @media only screen and (min-width: 1800px) {
-  .line-wrapper {
-    width: 100%;
-  }
+  
   .post-wrapper {
     width: auto;
     display: grid;
     grid-template-rows: auto auto auto auto;
     grid-template-columns: auto auto;
     gap: 50px;
-    /* background-color: darkorange; */
   }
 }
