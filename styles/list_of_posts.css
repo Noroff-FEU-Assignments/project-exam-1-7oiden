@@ -107,7 +107,7 @@ h4 {
 }
 .info-container p {
   padding-right: 10px;
-  color: #5e7c88;
+  color: var(--blue-gray);
   font-size: 0.875rem;
   font-weight: 800;
   padding: 0;
@@ -180,7 +180,6 @@ h4 {
   }
 }
 @media only screen and (min-width: 1800px) {
-  
   .post-wrapper {
     width: auto;
     display: grid;

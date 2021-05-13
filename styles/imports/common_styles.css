@@ -1,7 +1,7 @@
 :root {
   --navy: #3a4352;
   --gold: #feb41c;
-  --teal: #4b5f6d;
+  --blue-gray: #4b5f6d;
   --highlight: #5e7c88;
   --light-grey: #f3f3f3;
   --light-blue: #d2d6d9;
@@ -93,8 +93,8 @@ nav.menu {
   padding: 0;
 }
 .mobile-menu ul li {
-  padding-top: 1rem;
-  font-size: 1.125rem;
+  padding-top: 0.5rem;
+  font-size: 1.25rem;
 }
 .mobile-menu ul li a {
   color: white;
@@ -319,6 +319,7 @@ button:hover {
 .dropdown {
   max-width: 350px;
   margin-bottom: 3rem;
+  text-align: left;
 }
 #categories,
 #archive {
@@ -328,6 +329,7 @@ button:hover {
   background-color: var(--white);
   border: 2px solid grey;
   border-radius: 5px;
+  margin-top: 3px;
   margin-left: 0;
 }
 #search-form {
@@ -337,7 +339,7 @@ button:hover {
   position: absolute;
   font-size: 1.25rem;
   color: var(--navy);
-  top: 8px;
+  top: 33px;
   left: 0.5rem;
 }
 input[type="search"] {
@@ -348,7 +350,7 @@ input[type="search"] {
 /* footer
 --------------------*/
 footer {
-  background-color: #4b5f6d;
+  background-color: var(--blue-gray);
   color: var(--white);
   display: flex;
   justify-content: center;
@@ -456,9 +458,9 @@ footer p {
     width: 60%;
   }
   .line-wrapper {
-  margin-left: 2rem;
-  margin-right: 2rem;
-}
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
   .arrow {
     color: var(--navy);
     font-size: 1rem;

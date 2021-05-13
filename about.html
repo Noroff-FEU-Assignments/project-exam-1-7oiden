@@ -103,54 +103,62 @@
           <a href="products_overview.html" class="current">About me</a>
         </div>
       </nav>
+
       <div class="content-wrapper">
-        <section>
-          <div class="line-wrapper">
-            <div><hr /></div>
-            <h1>About me</h1>
-            <div><hr /></div>
-          </div>
-          <div class="post-container">
-            <figure class="post-image">
-              <img
-                class="post-image"
-                src="images/photographer-1080.jpg"
-                alt=""
-              />
-            </figure>
-            <h2>My passion for photography</h2>
-            <p class="post-text">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam
-              qui in asperiores, voluptates alias pariatur ipsum? Dolore quasi
-              qui vero nostrum consequuntur, error neque tempore laboriosam
-              obcaecati nam, expedita impedit.
-            </p>
-            <p class="post-text">
-              At vero eos et accusamus et iusto odio dignissimos ducimus qui
-              blanditiis praesentium voluptatum deleniti atque corrupti quos
-              dolores et quas molestias excepturi sint occaecati cupiditate non
-              provident, similique sunt in culpa qui officia deserunt mollitia
-              animi, id est laborum et dolorum fuga. Et harum quidem rerum
-              facilis est et expedita distinctio.
-            </p>
-            <p class="post-text">
-              Nam libero tempore, cum soluta nobis est eligendi optio cumque
-              nihil impedit quo minus id quod maxime placeat facere possimus,
-              omnis voluptas assumenda est, omnis dolor repellendus. Temporibus
-              autem quibusdam et aut officiis debitis aut rerum necessitatibus
-              saepe eveniet ut et voluptates repudiandae sint et molestiae non
-              recusandae.
-            </p>
-            <figure class="post-image">
-              <img class="post-image" src="images/photographer2.jpg" alt="" />
-            </figure>
-            <p class="post-text">
-              Itaque earum rerum hic tenetur a sapiente delectus, ut aut
-              reiciendis voluptatibus maiores alias consequatur aut perferendis
-              doloribus asperiores repellat.
-            </p>
-          </div>
-        </section>
+        <div class="about-wrapper">
+          <section>
+            <div class="line-wrapper">
+              <div><hr /></div>
+              <h1>About me</h1>
+              <div><hr /></div>
+            </div>
+            <div class="post-container">
+              <figure class="post-image">
+                <img
+                  class="post-image"
+                  src="images/photographer-1080.jpg"
+                  alt=""
+                />
+              </figure>
+              <h2>My passion for photography</h2>
+              <p class="post-text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam
+                qui in asperiores, voluptates alias pariatur ipsum? Dolore quasi
+                qui vero nostrum consequuntur, error neque tempore laboriosam
+                obcaecati nam, expedita impedit.
+              </p>
+              <p class="post-text">
+                At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                blanditiis praesentium voluptatum deleniti atque corrupti quos
+                dolores et quas molestias excepturi sint occaecati cupiditate
+                non provident, similique sunt in culpa qui officia deserunt
+                mollitia animi, id est laborum et dolorum fuga. Et harum quidem
+                rerum facilis est et expedita distinctio.
+              </p>
+              <blockquote>
+                Ut enim ad minima veniam, quis nostrum exercitationem ullam
+                corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
+                consequatur.
+              </blockquote>
+              <p class="post-text">
+                Nam libero tempore, cum soluta nobis est eligendi optio cumque
+                nihil impedit quo minus id quod maxime placeat facere possimus,
+                omnis voluptas assumenda est, omnis dolor repellendus.
+                Temporibus autem quibusdam et aut officiis debitis aut rerum
+                necessitatibus saepe eveniet ut et voluptates repudiandae sint
+                et molestiae non recusandae.
+              </p>
+              <figure class="post-image">
+                <img class="post-image" src="images/photographer2.jpg" alt="" />
+              </figure>
+              <p class="post-text">
+                Itaque earum rerum hic tenetur a sapiente delectus, ut aut
+                reiciendis voluptatibus maiores alias consequatur aut
+                perferendis doloribus asperiores repellat.
+              </p>
+            </div>
+          </section>
+        </div>
 
         <!-- aside -->
         <aside>
@@ -172,7 +180,7 @@
 
               <h5>Become a subscriber</h5>
               <form method="get" class="aside-input" id="newsletter-form">
-                <label id="label" for="email">E-mail:</label>
+                <label for="newsletter-email">E-mail:</label>
                 <input
                   class="input"
                   id="newsletter-email"
@@ -197,6 +205,7 @@
             </div>
             <div>
               <h5>Specific search</h5>
+              <label for="search">Search:</label>
               <form class="aside-input" id="search-form" action="">
                 <input
                   class="input"
@@ -226,6 +235,7 @@
 
               <h5>Categories</h5>
               <form action="" class="dropdown">
+                <label for="categories">Select category:</label>
                 <select name="categories" id="categories">
                   <option value="Street">Street</option>
                   <option value="Street">Lanscape</option>
@@ -237,6 +247,7 @@
 
               <h5>Article Archives</h5>
               <form action="" class="dropdown">
+                <label for="archive">Select month:</label>
                 <select name="archive" id="archive">
                   <option value="Street">Descember - 2020</option>
                   <option value="Street">January - 2021</option>

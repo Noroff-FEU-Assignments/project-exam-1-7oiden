@@ -41,7 +41,7 @@ h1 {
   box-shadow: 0 6px 12px #00000029;
 }
 .quote {
-  margin: 230px auto 0 auto;
+  margin: 200px auto 0 auto;
   background-color: #00000066;
   padding: 0.5rem 1rem 1rem 1rem;
 }
@@ -162,7 +162,7 @@ h1 {
   padding: 0;
 }
 .info-container p {
-  color: #5e7c88;
+  color: var(--blue-gray);
   font-size: 0.875rem;
   font-weight: 800;
   padding: 0;

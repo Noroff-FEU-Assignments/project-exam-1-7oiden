@@ -10,9 +10,9 @@ main {
   flex-direction: column;
   background-color: white;
 }
-section {
+.about-wrapper {
   width: 85%;
-  margin: 0 auto 2rem auto;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   /* background-color: blueviolet; */
@@ -36,8 +36,17 @@ h2 {
 .post-text {
   max-width: 400px;
 }
+blockquote {
+  font-size: 1.125rem;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--blue-gray);
+  border-left: 3px solid var(--light-blue);
+  padding-left: 1rem;
+  margin: 2rem 1rem 2rem 1rem;
+}
 .post-container {
-  /* max-width: 306px; */
+  width: 100%;
   color: var(--black);
   margin: 0 auto;
 }
@@ -63,6 +72,13 @@ figcaption {
 /* styles that change
 --------------------*/
 @media only screen and (min-width: 768px) {
+  .about-wrapper {
+    width: 75%;
+  }
+  section {
+    width: 85%;
+    margin: 0 auto;
+  }
   h1 {
     font-size: 1.375rem;
   }
@@ -74,7 +90,7 @@ figcaption {
     height: 324px;
   }
   .post-text {
-    max-width: 600px;
+    min-width: 524px;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -84,7 +100,7 @@ figcaption {
     margin: 0 auto;
     /* background-color: blueviolet; */
   }
-  section {
+  .about-wrapper {
     flex: 2;
   }
   h1 {
@@ -93,17 +109,23 @@ figcaption {
   h2 {
     font-size: 1.875rem;
   }
-  .post-text {
-    max-width: 600px;
-  }
+  
 }
 @media only screen and (min-width: 1600px) {
-  section {
+  .about-wrapper {
     flex: 3;
   }
-  .post-container {
+  .line-wrapper {
+    width: 100%;
+  }
+  section {
     width: 70%;
   }
+  .post-image {
+    width: 720px;
+    height: 445px;
+  }
   .post-text {
+    max-width: 720px;
   }
 }

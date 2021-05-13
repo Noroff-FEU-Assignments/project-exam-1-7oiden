@@ -17,6 +17,8 @@ main {
   flex-direction: column;
   /* background-color: blueviolet; */
 }
+section {
+}
 section a {
   margin-top: 2rem;
 }
@@ -30,7 +32,6 @@ h4 {
 }
 h2 {
   font-family: var(--adobe-caslon);
-  color: var(--navy);
   font-size: 1.375rem;
   font-weight: 800;
   margin-bottom: 0.5rem;
@@ -38,6 +39,7 @@ h2 {
 .post-container {
   width: 100%;
   color: var(--black);
+  margin: 0 auto
 }
 .post-image {
   width: 306px;
@@ -48,7 +50,7 @@ blockquote {
   font-size: 1.125rem;
   font-weight: 600;
   font-style: italic;
-  color: #5e7c88;
+  color: var(--blue-gray);
   border-left: 3px solid var(--light-blue);
   padding-left: 1rem;
   margin: 2rem 1rem 2rem 1rem;
@@ -78,7 +80,7 @@ blockquote {
   bottom: 0;
 }
 .info-container p {
-  color: #5e7c88;
+  color: var(--blue-gray);
   font-size: 1rem;
   font-weight: bold;
   padding: 0;
@@ -287,6 +289,10 @@ h4 {
   .blog-wrapper {
     width: 75%;
   }
+  section {
+    width: 85%;
+    margin: 0 auto;
+  }
   .post-image {
     width: 524px;
     height: 324px;
@@ -298,12 +304,12 @@ h4 {
     font-size: 1.5rem;
   }
   .post-text {
-    max-width: 90%;
+    width: 520px;
   }
 }
 @media only screen and (min-width: 1200px) {
   .content-wrapper {
-    width: 85%;
+    width: 90%;
     flex-direction: row;
     margin: 0 auto;
     /* background-color: blueviolet; */
@@ -350,5 +356,8 @@ h4 {
   .post-image {
     width: 720px;
     height: 445px;
+  }
+  .post-text {
+    width: 720px;
   }
 }
