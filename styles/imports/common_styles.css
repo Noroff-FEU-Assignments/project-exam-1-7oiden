@@ -118,7 +118,15 @@ nav.menu {
   background-color: white;
 }
 .breadcrumb div {
-  color: var(--navy);
+}
+.breadcrumb div a {
+  color: var(--blue-gray);
+  border-bottom: 1px solid transparent;
+  transition-property: border-bottom;
+  transition-duration: 0.3s;
+}
+.breadcrumb div a:hover {
+  border-bottom: 1px solid var(--navy);
 }
 .arrow {
   color: var(--navy);
@@ -436,7 +444,7 @@ footer p {
     color: var(--white);
     border-bottom: 2px solid var(--navy);
     transition-property: color border-bottom;
-    transition-duration: 0.5s;
+    transition-duration: 0.3s;
   }
   .menu-item:hover {
     color: var(--gold);
@@ -444,7 +452,7 @@ footer p {
   }
   .social-media {
     transition-property: color;
-    transition-duration: 0.5s;
+    transition-duration: 0.3s;
   }
   .social-media:hover {
     color: var(--gold);
@@ -481,7 +489,7 @@ footer p {
     align-items: center;
   }
   .breadcrumb {
-    width: 68%;
+    width: 67.5%;
   }
   .line-wrapper {
     width: 70%;
