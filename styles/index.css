@@ -57,7 +57,7 @@ h1 {
   font-size: 2rem;
 }
 .quote p:nth-child(3) {
-  font-family: var(--adobe-caslon);
+  font-family: var(--open-sans);
   font-size: 1rem;
   font-style: normal;
   margin-top: 10px;
@@ -151,11 +151,14 @@ h1 {
 } */
 .post-text {
   display: block;
-  margin-top: 0;
-  height: 120px;
+  max-height: 150px;
   overflow: hidden;
   max-width: 306px;
-  /* background-color: violet; */
+  margin-bottom: 2rem;
+}
+.post-text p {
+  margin-top: 0;
+  padding: 0;
 }
 .post-image {
   display: block;
@@ -163,36 +166,12 @@ h1 {
   height: 188px;
   margin: 0 0 1rem 0;
 }
-.info-container {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding: 0;
-}
-.info-container p {
-  color: var(--blue-gray);
-  font-size: 0.875rem;
-  font-weight: 800;
-  padding: 0;
-  margin-top: 0;
-  margin-right: 5px;
-  margin-bottom: 5px;
-  text-transform: uppercase;
-}
 h2,
 h3 {
   font-family: var(--century-gothic);
+  color: car(--navy);
   font-size: 1.25rem;
   font-weight: 400;
-}
-h4 {
-  font-family: var(--adobe-caslon);
-  font-size: 1.25rem;
-  text-decoration: underline;
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-  /* background-color: aqua; */
 }
 .post-link {
   text-align: center;
@@ -250,6 +229,9 @@ h4 {
   margin-left: 1rem;
   color: var(--navy);
 }
+#gradient-border:after {
+  height: 0;
+}
 
 /* styles that change
 --------------------*/
@@ -287,10 +269,6 @@ h4 {
   h3 {
     font-size: 1.375rem;
   }
-  h4 {
-    margin-top: 0;
-  }
-
   .feature-image {
     width: 524px;
     height: 324px;
@@ -360,6 +338,9 @@ h4 {
     /* background-color: darkorange; */
   }
 }
+/* .info-container p {
+    font-size: 1.125rem;
+} */
 @media only screen and (min-width: 1600px) {
   .main-container {
     background-image: url("../images/main_background_image-crop.jpg");
@@ -402,9 +383,6 @@ h4 {
     max-width: 360px;
     /* background-color: violet; */
   }
-  h4 {
-    font-size: 1.375rem;
-  }
   .line-wrapper {
     width: 100%;
   }
@@ -412,6 +390,7 @@ h4 {
 @media only screen and (min-width: 1900px) {
   .slideshow-container {
     width: 100%;
+    height: 550px;
   }
   .slideshow {
     height: 560px;
@@ -425,6 +404,7 @@ h4 {
   }
   .post-text {
     max-width: 524px;
+    height: 100px;
     /* background-color: violet; */
   }
 }

@@ -80,22 +80,19 @@ async function fetchPosts() {
 
       for (let j = 0; j < mediaArray.length; j++) {
         postWrapper.innerHTML += `
-    <div class="post-container">
+    <div class="post-container" id="gradient-border">
      <a href="specific_post.html?id=${results[i].id}">
      <figure class="post-image">
      <img class="post-image" src="${mediaArray[j].source_url}"/>
      </figure>
      <h4>${results[i].title.rendered}</h4>
      <div class="info-container">
-     <p>${categoryName}</p>
-     <p>|</p>
-     <p>${results[i].formatted_date}</p>
-     <p>|</p>
+     <p id="info">${categoryName}</p>
+     <p id="info">${results[i].formatted_date}</p>
      <p>${numReplies} comments</p>
      </div>
      <div class="post-text">${results[i].content.rendered}</div>
      </a>
-     <hr id="post-divider"/>
      </div>
      `;
 
@@ -115,11 +112,9 @@ async function fetchPosts() {
      <img class="feature-image" src="${mediaArray[j].source_url}"/>
      </figure>
      <h4>${results[i].title.rendered}</h4>
-     <div class="info-container">
-     <p>${categoryName}</p>
-     <p>/</p>
-     <p>${results[i].formatted_date}</p>
-     <p>/</p>
+     <div class="info-container" >
+     <p id="info">${categoryName}</p>
+     <p id="info">${results[i].formatted_date}</p>
      <p>${numReplies} comments</p>
      </div>
      <div class="feature-text">${results[i].content.rendered}</div>

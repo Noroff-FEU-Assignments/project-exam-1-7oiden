@@ -19,28 +19,29 @@ main {
 }
 section {
   width: 100%;
+  padding-top: 3rem;
 }
 section a {
   margin-top: 2rem;
 }
-h1,
-h3,
-h4 {
+
+h2,
+h3 {
   font-family: var(--century-gothic);
   color: var(--black);
   font-size: 1.25rem;
   font-weight: 400;
 }
-h2 {
-  font-family: var(--adobe-caslon);
+h1 {
+  font-family: var(--futura);
   font-size: 1.375rem;
-  font-weight: 800;
+  font-weight: 600;
   margin-bottom: 0.5rem;
 }
 .post-container {
   width: 100%;
   color: var(--black);
-  margin: 0 auto
+  margin: 0 auto;
 }
 .post-image {
   width: 306px;
@@ -51,53 +52,13 @@ h2 {
   min-width: 306px;
 }
 blockquote {
-  font-size: 1.125rem;
+  font-family: var(--century-gothic);
   font-weight: 600;
   font-style: italic;
   color: var(--blue-gray);
   border-left: 3px solid var(--light-blue);
   padding-left: 1rem;
   margin: 2rem 1rem 2rem 1rem;
-}
-.info-container {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-}
-#gradiant-border {
-  border-bottom: none;
-  position: relative;
-}
-#gradiant-border:after {
-  content: "";
-  background: -webkit-linear-gradient(
-    left,
-    var(--light-blue) 0%,
-    var(--light-blue) 25%,
-    #fff 100%
-  );
-  display: block;
-  height: 2px;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-}
-.info-container p {
-  color: var(--blue-gray);
-  font-size: 1rem;
-  font-weight: bold;
-  padding: 0;
-  margin-top: 0;
-  margin-right: 6px;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-}
-hr {
-  height: 1px;
-  background-color: #ccc;
-  border: none;
-  width: 100%;
 }
 .em {
   margin-top: 2rem;
@@ -117,11 +78,26 @@ figcaption {
   margin-top: 0;
   padding-top: 0;
   margin-bottom: 1rem;
-  margin-left: 0.5rem;
+  margin-right: 1rem;
   font-style: italic;
+  text-align: right;
+}
+/* gradiant border */
+#gradient-border {
+  border-bottom: none;
+  position: relative;
+}
+#gradient-border:after {
+  content: "";
+  background: -webkit-linear-gradient(left, #ccc 0%, #ccc 50%, #fff 100%);
+  display: block;
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 }
 .comments {
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 .comments-default {
   font-family: var(--open-sans);
@@ -145,8 +121,8 @@ figcaption {
   width: 75px;
   margin: 0 1rem 0 0;
 }
-h3,
-h4 {
+h2,
+h3 {
   margin: 0;
 }
 #comment-line {
@@ -298,16 +274,13 @@ h4 {
   section {
     width: 100%;
     margin: 0 auto;
-    padding-left: 5%
+    padding-left: 5%;
   }
   .post-image {
     width: 524px;
     height: 324px;
   }
   h1 {
-    font-size: 1.5rem;
-  }
-  h2 {
     font-size: 1.5rem;
   }
   .post-text {
@@ -333,15 +306,9 @@ h4 {
   h1 {
     font-size: 1.75rem;
   }
-  h2 {
-    font-size: 1.875rem;
-  }
-  h3,
-  h4 {
+  h2,
+  h3 {
     font-size: 1.5rem;
-  }
-  .info-container p {
-    font-size: 1rem;
   }
   .comments-default {
     font-size: 1.25rem;

@@ -25,14 +25,6 @@ h1 {
   font-size: 1.25rem;
   font-weight: 400;
 }
-h4 {
-  font-family: var(--adobe-caslon);
-  font-size: 1.25rem;
-  text-decoration: underline;
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-  /* background-color: aqua; */
-}
 .line-wrapper {
   margin-left: 2rem;
   margin-right: 2rem;
@@ -45,14 +37,18 @@ h4 {
 }
 .post-text {
   margin-top: 0;
-  height: 120px;
+  height: 130px;
   overflow: hidden;
 }
+.post-text p {
+  margin-top: 0;
+  padding: 0;
+}
 .post-container {
-  margin: 0 auto;
+  margin: 2rem auto 0 auto;
   display: none;
   transition: opacity 0.3s;
-  margin-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 .post-container:hover {
   opacity: 0.8;
@@ -94,23 +90,6 @@ h4 {
   transition: opacity 0.3s;
   opacity: 1;
 }
-
-.info-container {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding: 0;
-}
-.info-container p {
-  padding-right: 10px;
-  color: var(--blue-gray);
-  font-size: 0.875rem;
-  font-weight: 800;
-  padding: 0;
-  margin: 0 5px 0 0;
-  text-transform: uppercase;
-}
 #post-divider {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -132,6 +111,9 @@ h4 {
     grid-template-rows: auto auto auto auto;
     grid-template-columns: auto auto;
     gap: 25px;
+  }
+  .post-container {
+    margin: 1rem auto 0 auto;
   }
   .post-text {
     max-width: 306px;
@@ -174,6 +156,7 @@ h4 {
   }
   .post-text {
     max-width: 524px;
+    height: 100px;
   }
 }
 @media only screen and (min-width: 1800px) {
