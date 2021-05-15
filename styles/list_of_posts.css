@@ -37,10 +37,6 @@ h4 {
   margin-left: 2rem;
   margin-right: 2rem;
 }
-.divider {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
 .post-wrapper {
   display: flex;
   flex-direction: column;
@@ -56,6 +52,7 @@ h4 {
   margin: 0 auto;
   display: none;
   transition: opacity 0.3s;
+  margin-bottom: 1rem;
 }
 .post-container:hover {
   opacity: 0.8;

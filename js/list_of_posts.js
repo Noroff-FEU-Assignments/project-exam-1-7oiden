@@ -25,7 +25,7 @@ async function fetchPosts() {
     postWrapper.innerHTML = "";
 
     for (let i = 0; i < results.length; i++) {
-      if (i >= 8 && document.title === "home-page") {
+      if (i >= 8 && document.title === "Passionate Photography | Home-page") {
         break;
       }
       //fetch number of comments
@@ -99,14 +99,17 @@ async function fetchPosts() {
      </div>
      `;
 
-        if (results[i].tags.length > 1 && document.title === "home-page") {
+        if (
+          results[i].tags.length > 1 &&
+          document.title === "Passionate Photography | Home-page"
+        ) {
           // if (i >= 4 && document.title === "home-page") {
           //   break;
           // }
           featureWrapper.innerHTML = "";
 
           featureWrapper.innerHTML += `
-      <div class="feature-container">
+     <div class="feature-container">
      <a href="specific_post.html?id=${results[i].id}">
      <figure class="feature-image">
      <img class="feature-image" src="${mediaArray[j].source_url}"/>
@@ -141,7 +144,7 @@ const postLoader = document.querySelector("#load-button");
 
 let currentPosts = 10;
 
-if (document.title !== "home-page") {
+if (document.title !== "Passionate Photography | Home-page") {
   function loadMorePosts(event) {
     const postList = [
       ...document.querySelectorAll(".post-wrapper .post-container"),

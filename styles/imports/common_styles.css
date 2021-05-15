@@ -5,14 +5,11 @@
   --highlight: #5e7c88;
   --light-grey: #f3f3f3;
   --light-blue: #d2d6d9;
-  --beige: #fff8f0;
   --white: #fff;
   --black: #000;
-  --century-gothic: "century gothic";
-  --open-sans: "open sans";
-  --adobe-caslon: "adobe caslon pro regular";
-  --proxima-nova: "proxima nova";
-  --center: 0 auto 0 auto;
+  --century-gothic: "century gothic", "arial", sans-serif;
+  --open-sans: "open sans", "arial", sans-serif;
+  --adobe-caslon: "adobe caslon pro regular", "times new roman" serif;
 }
 
 /* global styles
@@ -185,6 +182,7 @@ h5 {
   background-color: var(--light-blue);
   text-align: center;
   padding: 10px;
+  /* border: 3px solid #3a435240; */
 }
 .about-image {
   width: 200px;
@@ -287,9 +285,13 @@ label {
   opacity: 1;
   cursor: pointer;
 }
-button:hover {
+.button:hover {
   opacity: 0.75;
   box-shadow: none;
+}
+#subscribe-button {
+  background-color: var(--navy);
+  color: white;
 }
 #subscribe-message {
   color: green;
