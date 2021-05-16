@@ -14,7 +14,7 @@ main {
   height: 670px;
 }
 .main-heading {
-  max-width: 85%;
+  max-width: 70%;
   display: inline-block;
 }
 .main-heading p {
@@ -31,7 +31,7 @@ h1 {
   display: inline-block;
   background-color: var(--gold);
   font-family: var(--adobe-caslon);
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 400;
   color: var(--black);
   display: inline-block;
