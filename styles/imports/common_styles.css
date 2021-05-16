@@ -392,12 +392,12 @@ input[type="search"] {
   padding: 0;
   margin-top: 0;
 }
-#info:after {
+.info:after {
   content: "\2215";
   padding-left: 5px;
   padding-right: 5px;
 }
-/* gradiant border */
+/* gradient border */
 #gradient-border {
   border-bottom: none;
   position: relative;

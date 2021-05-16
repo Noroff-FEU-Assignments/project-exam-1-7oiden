@@ -87,8 +87,8 @@ async function fetchPosts() {
      </figure>
      <h4>${results[i].title.rendered}</h4>
      <div class="info-container">
-     <p id="info">${categoryName}</p>
-     <p id="info">${results[i].formatted_date}</p>
+     <p class="info">${categoryName}</p>
+     <p class="info">${results[i].formatted_date}</p>
      <p>${numReplies} comments</p>
      </div>
      <div class="post-text">${results[i].content.rendered}</div>
@@ -113,8 +113,8 @@ async function fetchPosts() {
      </figure>
      <h4>${results[i].title.rendered}</h4>
      <div class="info-container" >
-     <p id="info">${categoryName}</p>
-     <p id="info">${results[i].formatted_date}</p>
+     <p class="info">${categoryName}</p>
+     <p class="info">${results[i].formatted_date}</p>
      <p>${numReplies} comments</p>
      </div>
      <div class="feature-text">${results[i].content.rendered}</div>

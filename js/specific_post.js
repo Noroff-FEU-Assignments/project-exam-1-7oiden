@@ -100,8 +100,8 @@ function createHtml(details) {
      </figure>
      <h1>${details.title.rendered}</h1>
      <div class="info-container" id="gradient-border">
-     <p>${categoryName}</p>
-     <p>${details.formatted_date}</p>
+     <p class="info">${categoryName}</p>
+     <p class="info">${details.formatted_date}</p>
      <p>${numReplies} comments</p>
      </div>
      <div class="post-text">${details.content.rendered}</div>

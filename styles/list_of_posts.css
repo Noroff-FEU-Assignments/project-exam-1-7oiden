@@ -16,9 +16,6 @@ section {
   display: flex;
   flex-direction: column;
 }
-#first-post {
-  margin-top: 0;
-}
 h1 {
   font-family: var(--century-gothic);
   color: var(--black);
@@ -35,17 +32,8 @@ h1 {
   width: 306px;
   margin: 0 auto;
 }
-.post-text {
-  margin-top: 0;
-  height: 130px;
-  overflow: hidden;
-}
-.post-text p {
-  margin-top: 0;
-  padding: 0;
-}
 .post-container {
-  margin: 2rem auto 0 auto;
+  margin: 1rem auto 0 auto;
   display: none;
   transition: opacity 0.3s;
   padding-bottom: 2rem;
@@ -90,15 +78,23 @@ h1 {
   transition: opacity 0.3s;
   opacity: 1;
 }
+.post-text {
+  margin-top: 0;
+  height: 130px;
+  overflow: hidden;
+}
+.post-text p {
+  margin-top: 0;
+  padding: 0;
+}
 #post-divider {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 #load-button {
-  margin-top: 0;
+  margin-top: 1rem;
   margin-bottom: 4rem;
 }
-
 /* styles that change
 --------------------*/
 @media only screen and (min-width: 768px) {
@@ -113,7 +109,7 @@ h1 {
     gap: 25px;
   }
   .post-container {
-    margin: 1rem auto 0 auto;
+    margin: 0 auto 0 auto;
   }
   .post-text {
     max-width: 306px;
@@ -135,6 +131,9 @@ h1 {
   }
   section {
     flex: 2;
+  }
+  .post-container {
+    margin-top: 1rem;
   }
 }
 @media only screen and (min-width: 1600px) {

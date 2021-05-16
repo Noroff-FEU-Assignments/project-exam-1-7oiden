@@ -125,7 +125,6 @@
             <div class="error-message" id="name-error">
               Must be at least 5 characters
             </div>
-
             <div class="contact-input">
               <label for="contact-email"><strong>E-mail</strong></label>
               <input
@@ -177,12 +176,10 @@
             <div class="success-message"></div>
           </form>
         </section>
-
         <!-- aside -->
         <aside>
           <div class="aside-container">
             <div>
-              <h5 class="top-h5">About me</h5>
               <h5 class="top-h5">About me</h5>
               <a href="about.html">
                 <figure class="about-image">
@@ -199,7 +196,6 @@
                 <p class="personal-info">Welcome here.</p>
                 <p id="read-more">Read more</p></a
               >
-
               <h5>Become a subscriber</h5>
               <form method="get" class="aside-input" id="newsletter-form">
                 <label for="newsletter-email">E-mail:</label>
@@ -227,8 +223,8 @@
             </div>
             <div>
               <h5>Specific search</h5>
-              <label for="search">Search:</label>
               <form class="aside-input" id="search-form" action="">
+                <label for="search">Search:</label>
                 <input
                   class="input"
                   type="search"
@@ -238,23 +234,12 @@
                 />
                 <i id="search-icon" class="fas fa-search"></i>
               </form>
-
               <h5>Featured posts</h5>
               <ul class="post-list featured-posts-list">
-                <!-- <li><a href="">Become a street photographer</a></li>
-                <li><a href="">Captivating Landscape Photo</a></li>
-                <li><a href="">Black & White</a></li>
-                <li><a href="">Shoot great portraits</a></li> -->
+                <!-- dynamic created content -->
               </ul>
-
               <h5>Most recent posts</h5>
-              <ul class="post-list recent-posts-list">
-                <!-- <li><a href="">Become a street photographer</a></li>
-                <li><a href="">Captivating Landscape Photo</a></li>
-                <li><a href="">Black & White</a></li>
-                <li><a href="">Shoot great portraits</a></li> -->
-              </ul>
-
+              <ul class="post-list recent-posts-list"></ul>
               <h5>Categories</h5>
               <form action="" class="dropdown">
                 <label for="categories">Select category:</label>
@@ -266,7 +251,6 @@
                   <option value="Street">Cityscape</option>
                 </select>
               </form>
-
               <h5>Article Archives</h5>
               <form action="" class="dropdown">
                 <label for="archive">Select month:</label>
@@ -283,6 +267,7 @@
         </aside>
       </div>
     </main>
+
     <footer>
       <i class="far fa-copyright"></i>
       <div>

@@ -104,19 +104,13 @@
           <a href="#" class="current"></a>
         </div>
       </nav>
-
       <div class="content-wrapper">
         <div class="blog-wrapper">
           <section>
-            <!-- <div class="line-wrapper">
-              <div><hr /></div>
-              <h1>Post page</h1>
-              <div><hr /></div>
-            </div> -->
             <div class="post-container">
               <div class="spinner"></div>
+              <!-- dynamic created content -->
             </div>
-
             <div class="modal">
               <span class="close"><i class="far fa-window-close"></i></span>
               <img class="modal-content" id="image" />
@@ -131,6 +125,7 @@
             </div>
             <div class="comment-wrapper">
               <div class="spinner"></div>
+              <!-- dynamic created content -->
             </div>
             <div class="line-wrapper" id="comment-divider">
               <div><hr /></div>
@@ -155,7 +150,6 @@
                 <div class="comment-error" id="comment-name-error">
                   Must be at least 3 characters
                 </div>
-
                 <div class="input-container">
                   <label for="comment-email"><strong>E-mail</strong></label>
                   <input
@@ -177,7 +171,7 @@
                   <textarea
                     class="comment-input"
                     name="comment"
-                    id="comment"
+                    id="comment-textarea"
                   ></textarea>
                 </div>
                 <div class="comment-error" id="comment-error">
@@ -202,7 +196,6 @@
           <div class="aside-container">
             <div>
               <h5 class="top-h5">About me</h5>
-              <h5 class="top-h5">About me</h5>
               <a href="about.html">
                 <figure class="about-image">
                   <img
@@ -218,7 +211,6 @@
                 <p class="personal-info">Welcome here.</p>
                 <p id="read-more">Read more</p></a
               >
-
               <h5>Become a subscriber</h5>
               <form method="get" class="aside-input" id="newsletter-form">
                 <label for="newsletter-email">E-mail:</label>
@@ -257,23 +249,14 @@
                 />
                 <i id="search-icon" class="fas fa-search"></i>
               </form>
-
               <h5>Featured posts</h5>
               <ul class="post-list featured-posts-list">
-                <!-- <li><a href="">Become a street photographer</a></li>
-                <li><a href="">Captivating Landscape Photo</a></li>
-                <li><a href="">Black & White</a></li>
-                <li><a href="">Shoot great portraits</a></li> -->
+                <!-- dynamic created content -->
               </ul>
-
               <h5>Most recent posts</h5>
               <ul class="post-list recent-posts-list">
-                <!-- <li><a href="">Become a street photographer</a></li>
-                <li><a href="">Captivating Landscape Photo</a></li>
-                <li><a href="">Black & White</a></li>
-                <li><a href="">Shoot great portraits</a></li> -->
+                <!-- dynamic created content -->
               </ul>
-
               <h5>Categories</h5>
               <form action="" class="dropdown">
                 <label for="categories">Select category:</label>
@@ -285,7 +268,6 @@
                   <option value="Street">Cityscape</option>
                 </select>
               </form>
-
               <h5>Article Archives</h5>
               <form action="" class="dropdown">
                 <label for="archive">Select month:</label>
@@ -302,6 +284,7 @@
         </aside>
       </div>
     </main>
+
     <footer>
       <i class="far fa-copyright"></i>
       <div>

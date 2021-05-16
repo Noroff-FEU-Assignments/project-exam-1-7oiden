@@ -15,10 +15,8 @@ main {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  /* background-color: blueviolet; */
 }
 section {
-  /* background-color: deepskyblue; */
   width: 100%;
 }
 section a {
@@ -29,6 +27,20 @@ h1 {
   color: var(--black);
   font-size: 1.25rem;
   font-weight: 400;
+}
+.post-container {
+  width: 100%;
+  color: var(--black);
+  margin: 0 auto;
+}
+.post-image {
+  width: 306px;
+  height: 188px;
+  margin: 0;
+}
+figcaption {
+  display: block;
+  margin-bottom: 1rem;
 }
 h2 {
   font-family: var(--futura);
@@ -48,24 +60,6 @@ blockquote {
   padding-left: 1rem;
   margin: 2rem 1rem 2rem 1rem;
 }
-.post-container {
-  width: 100%;
-  color: var(--black);
-  margin: 0 auto;
-}
-.post-image {
-  width: 306px;
-  height: 188px;
-  margin: 0;
-}
-em {
-  font-family: var(--century-gothic);
-  font-weight: 500;
-}
-figcaption {
-  display: block;
-  margin-bottom: 1rem;
-}
 /* styles that change
 --------------------*/
 @media only screen and (min-width: 768px) {
@@ -80,12 +74,12 @@ figcaption {
   h1 {
     font-size: 1.375rem;
   }
-  h2 {
-    font-size: 1.5rem;
-  }
   .post-image {
     width: 524px;
     height: 324px;
+  }
+  h2 {
+    font-size: 1.5rem;
   }
   .post-text {
     min-width: 524px;
@@ -98,6 +92,9 @@ figcaption {
   }
 }
 @media only screen and (min-width: 1200px) {
+  h1 {
+    font-size: 1.75rem;
+  }
   .content-wrapper {
     width: 90%;
     flex-direction: row;
@@ -107,19 +104,16 @@ figcaption {
   .about-wrapper {
     flex: 2;
   }
-  h1 {
-    font-size: 1.75rem;
-  }
   h2 {
     font-size: 1.75rem;
   }
 }
 @media only screen and (min-width: 1600px) {
-  .about-wrapper {
-    flex: 3;
-  }
   .line-wrapper {
     width: 100%;
+  }
+  .about-wrapper {
+    flex: 3;
   }
   section {
     width: 70%;
@@ -130,6 +124,9 @@ figcaption {
   }
   .post-text {
     min-width: 720px;
+  }
+  blockquote {
+    font-size: 1.125rem;
   }
 }
 @media only screen and (min-width: 1800px) {
