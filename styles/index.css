@@ -143,7 +143,10 @@ h1 {
   opacity: 0.8;
 }
 #post-divider {
-  display: none;
+  border: none;
+}
+#heading-line {
+  border: 1px solid #ccc;
 }
 /* .view {
   opacity: 1;

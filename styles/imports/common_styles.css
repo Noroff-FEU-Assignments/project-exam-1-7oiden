@@ -9,7 +9,7 @@
   --black: #000;
   --century-gothic: "century gothic", "arial", sans-serif;
   --open-sans: "open sans", "arial", sans-serif;
-  --adobe-caslon: "adobe caslon";
+  --adobe-caslon: "adobe caslon", "orpheus";
   --futura: "futura PT";
 }
 
@@ -212,8 +212,9 @@ h5 {
   width: 200px;
   border-radius: 10px;
 }
-#personal-info {
-  max-width: 300px;
+.personal-info {
+  max-width: 400px;
+  color: var(--navy);
 }
 #read-more {
   display: block;
@@ -393,8 +394,8 @@ input[type="search"] {
 }
 #info:after {
   content: "\2215";
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 /* gradiant border */
 #gradient-border {
