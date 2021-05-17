@@ -35,7 +35,7 @@ h1 {
 }
 .post-image {
   width: 306px;
-  height: 188px;
+  height: 204px;
   margin: 0;
 }
 figcaption {
@@ -76,7 +76,7 @@ blockquote {
   }
   .post-image {
     width: 524px;
-    height: 324px;
+    height: 349px;
   }
   h2 {
     font-size: 1.5rem;
@@ -129,7 +129,7 @@ blockquote {
   }
   .post-image {
     width: 720px;
-    height: 445px;
+    height: 480px;
   }
   .post-text {
     min-width: 720px;

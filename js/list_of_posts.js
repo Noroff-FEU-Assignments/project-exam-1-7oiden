@@ -25,9 +25,6 @@ async function fetchPosts() {
     postWrapper.innerHTML = "";
 
     for (let i = 0; i < results.length; i++) {
-      if (i >= 8 && document.title === "Passionate Photography | Home-page") {
-        break;
-      }
       //fetch number of comments
       const repliesArray = results[i]._embedded.replies;
 
@@ -38,6 +35,12 @@ async function fetchPosts() {
           numReplies = repliesArray[y].length;
         }
       }
+
+      //console.log(numReplies);
+
+      //console.log(mediaArray);
+
+      //console.log(category);
 
       const categoriesArray = results[i].categories;
 
@@ -73,6 +76,9 @@ async function fetchPosts() {
       const mediaArray = results[i]._embedded["wp:featuredmedia"];
 
       for (let j = 0; j < mediaArray.length; j++) {
+        if (i >= 8 && document.title === "Passionate Photography | Home-page") {
+          break;
+        }
         postWrapper.innerHTML += `
     <div class="post-container" id="gradient-border">
      <a href="specific_post.html?id=${results[i].id}">
@@ -89,12 +95,13 @@ async function fetchPosts() {
      </a>
      </div>
      `;
+      }
 
+      for (let j = 0; j < mediaArray.length; j++) {
         if (
           results[i].tags.length > 1 &&
           document.title === "Passionate Photography | Home-page"
         ) {
-         
           featureWrapper.innerHTML = "";
 
           featureWrapper.innerHTML += `
@@ -103,8 +110,8 @@ async function fetchPosts() {
      <figure class="feature-image">
      <img class="feature-image" src="${mediaArray[j].source_url}"/>
      </figure>
-     <h4  id="featured-heading">${results[i].title.rendered}</h4>
-     <div class="info-container" >
+     <h4 id="featured-header">${results[i].title.rendered}</h4>
+     <div class="info-container">
      <p class="info">${categoryName}</p>
      <p class="info">${results[i].formatted_date}</p>
      <p>${numReplies} comments</p>

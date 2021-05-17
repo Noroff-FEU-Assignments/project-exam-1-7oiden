@@ -150,7 +150,7 @@ h3 {
 .post-image {
   display: block;
   width: 306px;
-  height: 188px;
+  height: 204px;
   margin: 0 0 1rem 0;
 }
 .post-text {
@@ -259,7 +259,7 @@ h3 {
   }
   .feature-image {
     width: 524px;
-    height: 324px;
+    height: 349px;
   }
   .slideshow-container {
     width: 95%;
@@ -360,7 +360,7 @@ h3 {
 }
   .feature-image {
     width: 720px;
-    height: 445px;
+    height: 480px;
   }
   .slideshow-container {
     width: 85%;
@@ -370,7 +370,7 @@ h3 {
   }
   .post-image {
     width: 360px;
-    height: 223px;
+    height: 240px;
   }
   .post-text {
     max-width: 360px;
@@ -393,7 +393,7 @@ h3 {
   }
   .post-image {
     width: 524px;
-    height: 325px;
+    height: 349px;
   }
   .post-text {
     max-width: 524px;

@@ -73,7 +73,7 @@ h1 {
 }
 .post-image {
   width: 306px;
-  height: 188px;
+  height: 204px;
   margin: 0;
   transition: opacity 0.3s;
   opacity: 1;
@@ -155,7 +155,7 @@ h1 {
   }
   .post-image {
     width: 524px;
-    height: 324px;
+    height: 349px;
   }
   .post-text {
     max-width: 524px;
