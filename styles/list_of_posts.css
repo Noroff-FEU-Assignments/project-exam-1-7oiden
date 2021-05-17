@@ -19,7 +19,7 @@ section {
 h1 {
   font-family: var(--century-gothic);
   color: var(--black);
-  font-size: 1.25rem;
+  font-size: 1.375rem;
   font-weight: 400;
 }
 .line-wrapper {
@@ -85,6 +85,7 @@ h1 {
 }
 .post-text p {
   margin-top: 0;
+  margin-bottom: 4rem;
   padding: 0;
 }
 #post-divider {
@@ -99,7 +100,7 @@ h1 {
 --------------------*/
 @media only screen and (min-width: 768px) {
   h1 {
-    font-size: 1.375rem;
+    font-size: 1.5rem;
   }
   .post-wrapper {
     width: auto;
@@ -137,6 +138,9 @@ h1 {
   }
 }
 @media only screen and (min-width: 1600px) {
+  h1 {
+    font-size: 1.875rem;
+  }
   section {
     flex: 3;
   }

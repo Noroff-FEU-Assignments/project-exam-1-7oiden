@@ -300,6 +300,12 @@ h3 {
     width: 622px;
     height: 384px;
   }
+  .post-text {
+    font-size: 1.125rem;
+  }
+  blockquote {
+    font-size: 1.125rem;
+  }
   /* modal */
   .modal {
     margin-top: 97px;
@@ -328,6 +334,9 @@ h3 {
   }
   .line-wrapper {
     width: 100%;
+  }
+  h1 {
+    font-size: 1.875rem;
   }
   .post-image {
     width: 720px;

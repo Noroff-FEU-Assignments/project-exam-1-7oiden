@@ -39,12 +39,6 @@ async function fetchPosts() {
         }
       }
 
-      //console.log(numReplies);
-
-      //console.log(mediaArray);
-
-      //console.log(category);
-
       const categoriesArray = results[i].categories;
 
       let categoryName;
@@ -100,9 +94,7 @@ async function fetchPosts() {
           results[i].tags.length > 1 &&
           document.title === "Passionate Photography | Home-page"
         ) {
-          // if (i >= 4 && document.title === "home-page") {
-          //   break;
-          // }
+         
           featureWrapper.innerHTML = "";
 
           featureWrapper.innerHTML += `
@@ -111,7 +103,7 @@ async function fetchPosts() {
      <figure class="feature-image">
      <img class="feature-image" src="${mediaArray[j].source_url}"/>
      </figure>
-     <h4>${results[i].title.rendered}</h4>
+     <h4  id="featured-heading">${results[i].title.rendered}</h4>
      <div class="info-container" >
      <p class="info">${categoryName}</p>
      <p class="info">${results[i].formatted_date}</p>

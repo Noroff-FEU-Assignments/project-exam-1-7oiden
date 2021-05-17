@@ -177,14 +177,13 @@ const commentForm = document.querySelector("#comment-form");
 
 const name = document.querySelector("#name");
 const commentEmail = document.querySelector("#comment-email");
-const comment = document.querySelector("#comment");
+const comment = document.querySelector("#comment-textarea");
 
 const commentNameError = document.querySelector("#comment-name-error");
 const commentEmailError = document.querySelector("#comment-email-error");
 const commentError = document.querySelector("#comment-error");
 
 const commentButton = document.querySelector("#comment-button");
-
 const commentSent = document.querySelector(".comment-sent");
 
 function checkCommentInput() {

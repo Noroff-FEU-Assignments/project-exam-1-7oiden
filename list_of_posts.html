@@ -40,13 +40,15 @@
               <img src="images/logo.png" alt="Passionate Photography logo" />
             </a>
           </figure>
-          <nav id="hamburger-menu"><i class="fas fa-bars"></i></nav>
+          <nav id="hamburger-menu" aria-label="menu icon">
+            <i class="fas fa-bars"></i>
+          </nav>
           <!-- large screen menu -->
-          <nav class="menu">
+          <nav class="menu" aria-label="main menu">
             <ul class="menu">
               <li><a class="menu-item" href="index.html">Home</a></li>
               <li>
-                <a class="menu-item" href="list_of_posts.html">All posts</a>
+                <a class="menu-item" href="list_of_posts.html">Blog posts</a>
               </li>
               <li><a class="menu-item" href="about.html">About me</a></li>
               <li><a class="menu-item" href="contact.html">Contact</a></li>
@@ -73,7 +75,7 @@
       </div>
       <!-- small screen menu -->
       <div class="mobile-container">
-        <nav class="mobile-menu">
+        <nav class="mobile-menu" aria-label="main menu">
           <ul class="menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="list_of_posts.html">All posts</a></li>
@@ -96,7 +98,7 @@
     </header>
 
     <main>
-      <nav class="breadcrumb">
+      <nav class="breadcrumb" aria-label="hieracy of content">
         <div>
           <a href="index.html" class="previous"> Home</a>
           <i class="arrow fas fa-chevron-right"></i>

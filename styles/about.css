@@ -25,7 +25,7 @@ section a {
 h1 {
   font-family: var(--century-gothic);
   color: var(--black);
-  font-size: 1.25rem;
+  font-size: 1.375rem;
   font-weight: 400;
 }
 .post-container {
@@ -72,7 +72,7 @@ blockquote {
     padding-left: 5%;
   }
   h1 {
-    font-size: 1.375rem;
+    font-size: 1.5rem;
   }
   .post-image {
     width: 524px;
@@ -107,10 +107,19 @@ blockquote {
   h2 {
     font-size: 1.75rem;
   }
+  .post-text {
+    font-size: 1.125rem;
+  }
+  blockquote {
+    font-size: 1.125rem;
+  }
 }
 @media only screen and (min-width: 1600px) {
   .line-wrapper {
     width: 100%;
+  }
+  h1 {
+    font-size: 1.875rem;
   }
   .about-wrapper {
     flex: 3;
@@ -124,9 +133,6 @@ blockquote {
   }
   .post-text {
     min-width: 720px;
-  }
-  blockquote {
-    font-size: 1.125rem;
   }
 }
 @media only screen and (min-width: 1800px) {

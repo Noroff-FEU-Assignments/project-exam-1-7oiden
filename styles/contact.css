@@ -19,7 +19,7 @@ section {
 h1 {
   font-family: var(--century-gothic);
   color: var(--black);
-  font-size: 1.25rem;
+  font-size: 1.375rem;
   font-weight: 400;
 }
 #contact-form {
@@ -88,7 +88,7 @@ textarea {
 }
 @media only screen and (min-width: 768px) {
   h1 {
-    font-size: 1.35rem;
+    font-size: 1.5rem;
   }
   #contact-form {
     padding-right: 15%;
@@ -111,15 +111,16 @@ textarea {
   section {
     flex: 2;
   }
-  h1 {
-    font-size: 1.75rem;
-  }
+
   #contact-form {
     padding-right: 15%;
     padding-left: 15%;
   }
 }
 @media only screen and (min-width: 1600px) {
+  h1 {
+    font-size: 1.875rem;
+  }
   section {
     flex: 3;
   }
