@@ -133,8 +133,8 @@ h3 {
   display: none;
   position: fixed;
   z-index: 1;
-  margin-top: 70px;
-  padding-top: 100px;
+  margin-top: 60px;
+  padding-top: 80px;
   left: 0;
   top: 0;
   width: 100%;
@@ -153,7 +153,7 @@ h3 {
 #caption {
   margin: auto;
   display: block;
-  width: 80%;
+  width: 85%;
   max-width: 700px;
   text-align: center;
   color: #ccc;
@@ -176,10 +176,13 @@ h3 {
 .close {
   position: absolute;
   top: 30px;
-  right: 40px;
+  right: 7.5%;
   color: #fff;
   font-size: 2rem;
   cursor: pointer;
+}
+.close i {
+  font-size: 1.5rem;
 }
 #comment-line {
   margin-top: 2rem;
@@ -306,9 +309,18 @@ h3 {
   blockquote {
     font-size: 1.125rem;
   }
-  /* modal */
   .modal {
-    margin-top: 97px;
+    margin-top: 90px;
+    padding-top: 100px;
+  }
+  .close {
+    margin-top: 15px;
+  }
+  .close i {
+    font-size: 2rem;
+  }
+  #caption {
+    font-size: 1.125rem;
   }
   h1 {
     font-size: 1.75rem;
@@ -344,6 +356,12 @@ h3 {
   }
   .post-text {
     min-width: 720px;
+  }
+   .modal {
+    margin-top: 75px;
+  }
+  .close {
+    margin-right: 10%;
   }
 }
 @media only screen and (min-width: 1800px) {

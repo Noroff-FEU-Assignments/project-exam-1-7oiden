@@ -29,7 +29,7 @@ strong {
 }
 h1 {
   display: inline-block;
-  background-color: #feb41ce6;
+  background-color: var(--gold);
   font-family: var(--adobe-caslon);
   font-size: 1.75rem;
   font-weight: 400;

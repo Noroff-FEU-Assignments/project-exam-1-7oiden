@@ -496,9 +496,12 @@ footer p {
   }
   .menu-item {
     color: var(--white);
-    border-bottom: 2px solid var(--navy);
+    border-bottom: 2px solid transparent;
     transition-property: color border-bottom;
     transition-duration: 0.3s;
+  }
+  .current-page {
+    border-bottom: 2px solid white;
   }
   .menu-item:hover {
     color: var(--gold);
