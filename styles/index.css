@@ -86,10 +86,6 @@ h3 {
 .featured:first-child {
   margin-top: 2rem;
 }
-.feature-wrapper {
-  display: flex;
-  flex-direction: column;
-}
 .feature-container {
   display: inline-block;
   transition: opacity 0.3s;
@@ -230,10 +226,6 @@ h3 {
   }
 }
 @media only screen and (min-width: 576px) {
-  .feature-wrapper {
-    flex-direction: row;
-    margin-left: 10%;
-  }
   .feature-text {
     padding-right: 5%;
   }
@@ -356,8 +348,8 @@ h3 {
     width: 90%;
   }
   #featured-heading {
-  font-size: 1.75rem;
-}
+    font-size: 1.75rem;
+  }
   .feature-image {
     width: 720px;
     height: 480px;

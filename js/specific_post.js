@@ -112,7 +112,6 @@ function createHtml(details) {
     function (event) {
       if (!event.target.matches(".post-image")) return;
       {
-        console.log(modal);
         modal.style.display = "block";
         modalImage.src = `${details._embedded["wp:featuredmedia"]["0"].source_url}`;
         captionText.innerHTML = `${details._embedded["wp:featuredmedia"]["0"].caption.rendered}`;
@@ -251,20 +250,4 @@ function validateEmail(contactEmail) {
   const regEx = /\S+@\S+\.\S+/;
   const patternMatches = regEx.test(contactEmail);
   return patternMatches;
-}
-
-//modal
-
-// document.addEventListener("click", function (e) {
-//   if (e.target && e.target.id == "#myimg") {
-//     console.log("hi");
-//   }
-// });
-
-{
-  /* <div class="modal">
-     <span class="close">x</span>
-     <img class="modal-content" id="img01">
-     <div> id="caption"></div>
-     </div> */
 }

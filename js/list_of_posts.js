@@ -24,6 +24,10 @@ async function fetchPosts() {
 
     postWrapper.innerHTML = "";
 
+    if (document.title === "Passionate Photography | Home-page") {
+      featureWrapper.innerHTML = "";
+    }
+
     for (let i = 0; i < results.length; i++) {
       //fetch number of comments
       const repliesArray = results[i]._embedded.replies;
@@ -37,8 +41,6 @@ async function fetchPosts() {
       }
 
       //console.log(numReplies);
-
-      //console.log(mediaArray);
 
       //console.log(category);
 
@@ -97,18 +99,15 @@ async function fetchPosts() {
      `;
       }
 
-      for (let j = 0; j < mediaArray.length; j++) {
-        if (
-          results[i].tags.length > 1 &&
-          document.title === "Passionate Photography | Home-page"
-        ) {
-          featureWrapper.innerHTML = "";
-
-          featureWrapper.innerHTML += `
+      if (
+        results[i].tags.length >= 2 &&
+        document.title === "Passionate Photography | Home-page"
+      ) {
+        featureWrapper.innerHTML += `
      <div class="feature-container">
      <a href="specific_post.html?id=${results[i].id}">
      <figure class="feature-image">
-     <img class="feature-image" src="${mediaArray[j].source_url}"/>
+     <img class="feature-image" src="${mediaArray[0].source_url}"/>
      </figure>
      <h4 id="featured-header">${results[i].title.rendered}</h4>
      <div class="info-container">
@@ -119,7 +118,6 @@ async function fetchPosts() {
      <div class="feature-text">${results[i].content.rendered}</div>
      </a>
      </div>`;
-        }
       }
     }
   } catch (error) {
