@@ -4,14 +4,10 @@ const postContainer = document.querySelector(".post-container");
 const postImage = document.querySelector(".post-image");
 const postHeading = document.querySelector("h2");
 const contentText = document.querySelector(".post-text");
-
 const modal = document.querySelector(".modal");
-
 const modalImage = document.querySelector("#image");
 const captionText = document.querySelector("#caption");
-
 const span = document.getElementsByClassName("close")[0];
-
 const queryString = document.location.search;
 
 const params = new URLSearchParams(queryString);
@@ -93,6 +89,7 @@ function createHtml(details) {
         break;
     }
   }
+
   postContainer.innerHTML = `
      <figure class="post-image">
      <img class="post-image" id="my-image" src="${details._embedded["wp:featuredmedia"]["0"].source_url}" alt="${details._embedded["wp:featuredmedia"]["0"].alt_text}"/>
@@ -173,15 +170,12 @@ fetchComments();
 // comment form
 
 const commentForm = document.querySelector("#comment-form");
-
 const name = document.querySelector("#name");
 const commentEmail = document.querySelector("#comment-email");
 const comment = document.querySelector("#comment-textarea");
-
 const commentNameError = document.querySelector("#comment-name-error");
 const commentEmailError = document.querySelector("#comment-email-error");
 const commentError = document.querySelector("#comment-error");
-
 const commentButton = document.querySelector("#comment-button");
 const commentSent = document.querySelector(".comment-sent");
 

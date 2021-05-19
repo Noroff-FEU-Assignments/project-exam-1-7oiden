@@ -81,11 +81,14 @@ async function fetchPosts() {
         if (i >= 8 && document.title === "Passionate Photography | Home-page") {
           break;
         }
+
+        //console.log(mediaArray[j].alt_text);
+
         postWrapper.innerHTML += `
     <div class="post-container" id="gradient-border">
      <a href="specific_post.html?id=${results[i].id}">
      <figure class="post-image">
-     <img class="post-image" src="${mediaArray[j].source_url}"/>
+     <img class="post-image" src="${mediaArray[j].source_url}" alt="${mediaArray[j].alt_text}"/>
      </figure>
      <h4>${results[i].title.rendered}</h4>
      <div class="info-container">
@@ -107,7 +110,7 @@ async function fetchPosts() {
      <div class="feature-container">
      <a href="specific_post.html?id=${results[i].id}">
      <figure class="feature-image">
-     <img class="feature-image" src="${mediaArray[0].source_url}"/>
+     <img class="feature-image" src="${mediaArray[0].source_url}" alt="${mediaArray[0].alt_text}"/>
      </figure>
      <h4 id="featured-header">${results[i].title.rendered}</h4>
      <div class="info-container">

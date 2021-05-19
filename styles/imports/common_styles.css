@@ -138,6 +138,7 @@ nav.menu {
 .line-wrapper {
   display: flex;
   align-items: center;
+  margin-top: 0;
   margin-bottom: 1rem;
 }
 .line-wrapper div:nth-child(1) {
@@ -155,6 +156,7 @@ nav.menu {
 .line-wrapper div:nth-child(5) {
   flex: 6;
   margin-left: 10px;
+  margin-right: 10px;
   height: 1px;
   background: -webkit-linear-gradient(left, #ccc 0%, #ccc 75%, #fff 100%);
 }

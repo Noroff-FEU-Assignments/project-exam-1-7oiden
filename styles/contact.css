@@ -29,7 +29,7 @@ h1 {
   padding-right: 7.5%;
   padding-left: 7.5%;
   padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
   text-align: center;
   margin: 0 auto;
   width: 100%;
@@ -37,6 +37,9 @@ h1 {
 .contact-input {
   display: flex;
   flex-direction: column;
+}
+.contact-input label {
+  font-size: 0.875rem;
 }
 .input {
   color: var(--navy);
@@ -55,6 +58,7 @@ textarea {
 #contact-email-error,
 #message-error {
   visibility: hidden;
+  padding-bottom: 1rem;
 }
 #success-message {
   color: green;
@@ -84,6 +88,7 @@ textarea {
   #contact-form {
     padding-right: 10%;
     padding-left: 10%;
+    padding-top: 3rem;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -111,11 +116,13 @@ textarea {
   section {
     flex: 2;
   }
-
   #contact-form {
     padding-right: 15%;
     padding-left: 15%;
   }
+  .contact-input label {
+  font-size: 1rem;
+}
 }
 @media only screen and (min-width: 1600px) {
   h1 {
@@ -125,7 +132,7 @@ textarea {
     flex: 3;
   }
   #contact-form {
-    width: 70%;
+    width: 60%;
     padding-right: 10%;
     padding-left: 10%;
   }

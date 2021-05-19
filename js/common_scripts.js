@@ -57,7 +57,7 @@ const recentPosts = document.querySelector(".recent-posts-list");
 const featuredPosts = document.querySelector(".featured-posts-list");
 
 const recentPostsUrl =
-  "http://7oiden.com/passionate-photography/wp-json/wp/v2/posts/?_embed&per_page=12&orderby=date";
+  "http://7oiden.com/passionate-photography/wp-json/wp/v2/posts/?_embed&per_page=12&orderby=date&per_page=15";
 
 const corsFix = "https://noroffcors.herokuapp.com/" + recentPostsUrl;
 
