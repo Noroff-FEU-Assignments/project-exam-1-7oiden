@@ -1,5 +1,4 @@
 // contact form
-
 const contactForm = document.querySelector("#contact-form");
 
 const fullName = document.querySelector("#full-name");

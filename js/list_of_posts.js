@@ -13,8 +13,6 @@ const postsUrl =
 
 const corsFixUrl = "https://noroffcors.herokuapp.com/" + postsUrl;
 
-//console.log(postsUrl);
-
 async function fetchPosts() {
   try {
     const response = await fetch(corsFixUrl);
@@ -24,7 +22,7 @@ async function fetchPosts() {
 
     postWrapper.innerHTML = "";
 
-    if (document.title === "Passionate Photography | Home-page") {
+    if (document.location.pathname === "/index.html") {
       featureWrapper.innerHTML = "";
     }
 
@@ -40,10 +38,6 @@ async function fetchPosts() {
         }
       }
 
-      //console.log(numReplies);
-
-      //console.log(category);
-
       const categoriesArray = results[i].categories;
 
       let categoryName;
@@ -51,12 +45,8 @@ async function fetchPosts() {
 
       if (categoriesArray.length === 0) {
         categoryName = "Unspecified";
-        //console.log(categoryName);
       } else {
         switch (category) {
-          case 6:
-            categoryName = "Cityscape";
-            break;
           case 5:
             categoryName = "Black & white";
             break;
@@ -78,11 +68,9 @@ async function fetchPosts() {
       const mediaArray = results[i]._embedded["wp:featuredmedia"];
 
       for (let j = 0; j < mediaArray.length; j++) {
-        if (i >= 8 && document.title === "Passionate Photography | Home-page") {
+        if (i >= 8 && document.location.pathname === "/index.html") {
           break;
         }
-
-        //console.log(mediaArray[j].alt_text);
 
         postWrapper.innerHTML += `
     <div class="post-container" id="gradient-border">
@@ -104,7 +92,7 @@ async function fetchPosts() {
 
       if (
         results[i].tags.length >= 2 &&
-        document.title === "Passionate Photography | Home-page"
+        document.location.pathname === "/index.html"
       ) {
         featureWrapper.innerHTML += `
      <div class="feature-container">
@@ -112,7 +100,7 @@ async function fetchPosts() {
      <figure class="feature-image">
      <img class="feature-image" src="${mediaArray[0].source_url}" alt="${mediaArray[0].alt_text}"/>
      </figure>
-     <h4 id="featured-header">${results[i].title.rendered}</h4>
+     <h4 id="feature-heading">${results[i].title.rendered}</h4>
      <div class="info-container">
      <p class="info">${categoryName}</p>
      <p class="info">${results[i].formatted_date}</p>
@@ -134,12 +122,11 @@ async function fetchPosts() {
 fetchPosts();
 
 //load more button
-
 const postLoader = document.querySelector("#load-button");
 
 let currentPosts = 10;
 
-if (document.title !== "Passionate Photography | Home-page") {
+if (document.location.pathname !== "/index.html") {
   function loadMorePosts(event) {
     const postList = [
       ...document.querySelectorAll(".post-wrapper .post-container"),

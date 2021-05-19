@@ -111,10 +111,10 @@ h3 {
 /* modal */
 #my-image {
   cursor: pointer;
-  transition: 0.3s;
+  transition: opacity 0.5s;
 }
 #my-image:hover {
-  opacity: 0.85;
+  opacity: 0.9;
 }
 .modal {
   display: none;

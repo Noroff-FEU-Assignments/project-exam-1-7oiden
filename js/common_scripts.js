@@ -1,5 +1,4 @@
 //mobile dropdown menu
-
 const hamburgerMenu = document.querySelector("#hamburger-menu");
 const mobileMenu = document.querySelector(".mobile-menu");
 
@@ -14,7 +13,6 @@ function mobileMenuDropdown() {
 hamburgerMenu.addEventListener("click", mobileMenuDropdown);
 
 //newsletter
-
 const newsletterForm = document.querySelector("#newsletter-form");
 const subscribeMessage = document.querySelector(".subscribe-message");
 const subscribeButton = document.querySelector("#subscribe-button");
@@ -61,14 +59,10 @@ const recentPostsUrl =
 
 const corsFix = "https://noroffcors.herokuapp.com/" + recentPostsUrl;
 
-//console.log(postsUrl);
-
 async function fetchPosts() {
   try {
     const response = await fetch(corsFix);
     const results = await response.json();
-
-    //console.log(results);
 
     recentPosts.innerHTML = "";
 

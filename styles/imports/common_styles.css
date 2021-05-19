@@ -203,6 +203,10 @@ h5 {
 .about-image {
   width: 200px;
   margin-left: 0;
+  transition: opacity 0.5s;
+}
+.about-image:hover {
+  opacity: 0.8;
 }
 .about-image img {
   width: 200px;

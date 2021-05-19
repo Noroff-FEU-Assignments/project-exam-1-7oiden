@@ -35,12 +35,9 @@ h1 {
 .post-container {
   margin: 1rem auto 0 auto;
   display: none;
-  transition: opacity 0.3s;
   padding-bottom: 2rem;
 }
-.post-container:hover {
-  opacity: 0.8;
-}
+
 .post-container:nth-child(1) {
   display: block;
 }
@@ -75,8 +72,11 @@ h1 {
   width: 306px;
   height: 204px;
   margin: 0;
-  transition: opacity 0.3s;
+  transition: opacity 0.5s;
   opacity: 1;
+}
+.post-image:hover {
+  opacity: 0.9;
 }
 .post-text {
   margin-top: 0;
@@ -94,7 +94,8 @@ h1 {
 }
 #load-button {
   margin-top: 1rem;
-  margin-bottom: 4rem;
+  margin-bottom: 120px
+  ;
 }
 /* styles that change
 --------------------*/
@@ -118,7 +119,7 @@ h1 {
 }
 @media only screen and (min-width: 900px) {
   .post-wrapper {
-    gap: 25px;
+    gap: 50px;
   }
 }
 @media only screen and (min-width: 1200px) {

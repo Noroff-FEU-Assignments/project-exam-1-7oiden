@@ -23,8 +23,6 @@ specificPostUrl =
 
 const corsFixSpecific = "https://noroffcors.herokuapp.com/" + specificPostUrl;
 
-console.log(specificPostUrl);
-
 async function fetchSpecific() {
   try {
     const response = await fetch(corsFixSpecific);
@@ -33,8 +31,6 @@ async function fetchSpecific() {
     console.log(details);
 
     document.title = `Passionate Photography | ${details.title.rendered}`;
-
-    //console.log(details.categories[0]);
 
     createHtml(details);
   } catch (error) {
@@ -56,8 +52,6 @@ function createHtml(details) {
     numReplies = replies[0].length;
   }
 
-  //console.log(numReplies);
-
   currentBreadcrumb.innerHTML = `${details.title.rendered}`;
 
   const categoriesArray = details.categories;
@@ -65,7 +59,6 @@ function createHtml(details) {
   let categoryName;
   let category = details.categories[0];
 
-  console.log(details.categories[0]);
 
   if (categoriesArray.length === 0) {
     categoryName = "Unspecified";
@@ -104,6 +97,7 @@ function createHtml(details) {
      <div class="post-text">${details.content.rendered}</div>
  `;
 
+ //modal
   document.addEventListener(
     "click",
     function (event) {

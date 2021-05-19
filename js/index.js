@@ -1,4 +1,4 @@
-//slideshow
+//carousel
 
 const slider = document.querySelector(".post-wrapper");
 const indicatorCircles = document.querySelector(".circle-wrapper");
