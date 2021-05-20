@@ -1,6 +1,10 @@
 const postWrapper = document.querySelector(".post-wrapper");
 const featureWrapper = document.querySelector(".feature-wrapper");
 
+var htmlSelector = document.querySelectorAll("html");
+
+console.log(htmlSelector[0]);
+
 const embed = "?_embed";
 const perPage = "&per_page=15";
 const order = "&orderby=date";
@@ -22,7 +26,7 @@ async function fetchPosts() {
 
     postWrapper.innerHTML = "";
 
-    if (document.location.pathname === "/index.html") {
+    if (htmlSelector[0].className === "index-page") {
       featureWrapper.innerHTML = "";
     }
 
@@ -68,7 +72,7 @@ async function fetchPosts() {
       const mediaArray = results[i]._embedded["wp:featuredmedia"];
 
       for (let j = 0; j < mediaArray.length; j++) {
-        if (i >= 8 && document.location.pathname === "/index.html") {
+        if (i >= 8 && htmlSelector[0].className === "index-page") {
           break;
         }
 
@@ -91,9 +95,7 @@ async function fetchPosts() {
 
         const sliderHeading = document.querySelectorAll(".dynamic-header");
 
-        console.log(document.location);
-
-        if (document.location.pathname === "/index.html") {
+        if (htmlSelector[0].className === "index-page") {
           sliderHeading.forEach(function (h2) {
             h2.outerHTML = "<h4>" + h2.innerHTML + "</h4>";
           });
@@ -101,10 +103,7 @@ async function fetchPosts() {
       }
 
       //main-featured post
-      if (
-        results[i].tags.length >= 2 &&
-        document.location.pathname === "/index.html"
-      ) {
+      if (results[i].tags.length >= 2 && htmlSelector[0].className === "index-page") {
         featureWrapper.innerHTML += `
      <div class="feature-container">
      <a href="specific_post.html?id=${results[i].id}">
@@ -137,7 +136,7 @@ const postLoader = document.querySelector("#load-button");
 
 let currentPosts = 10;
 
-if (document.location.pathname !== "/index.html") {
+if (htmlSelector[0].className !== "index-page") {
   function loadMorePosts(event) {
     const postList = [
       ...document.querySelectorAll(".post-wrapper .post-container"),
