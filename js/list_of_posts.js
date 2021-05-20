@@ -91,6 +91,8 @@ async function fetchPosts() {
 
         const sliderHeading = document.querySelectorAll(".dynamic-header");
 
+        console.log(document.location);
+
         if (document.location.pathname === "/index.html") {
           sliderHeading.forEach(function (h2) {
             h2.outerHTML = "<h4>" + h2.innerHTML + "</h4>";
