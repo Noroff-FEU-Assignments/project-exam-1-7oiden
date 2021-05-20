@@ -93,3 +93,29 @@ async function fetchPosts() {
 }
 
 fetchPosts();
+
+//convert headings
+const asideHeading = document.querySelectorAll("h5");
+
+if (
+  document.location.pathname === "/contact.html"
+) {
+  asideHeading.forEach(function (h5) {
+    h5.outerHTML = "<h2>" + h5.innerHTML + "</h2>";
+  });
+}
+
+if (
+  document.location.pathname === "/about.html" ||
+  document.location.pathname === "/list_of_posts.html"
+) {
+  asideHeading.forEach(function (h5) {
+    h5.outerHTML = "<h3>" + h5.innerHTML + "</h3>";
+  });
+}
+
+if (document.location.pathname === "/specific_post.html") {
+  asideHeading.forEach(function (h5) {
+    h5.outerHTML = "<h4>" + h5.innerHTML + "</h4>";
+  });
+}

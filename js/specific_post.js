@@ -162,7 +162,6 @@ async function fetchComments() {
 fetchComments();
 
 // comment form
-
 const commentForm = document.querySelector("#comment-form");
 const name = document.querySelector("#name");
 const commentEmail = document.querySelector("#comment-email");

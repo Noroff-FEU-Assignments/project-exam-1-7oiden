@@ -182,24 +182,6 @@ aside {
 .aside-container p {
   text-align: left;
 }
-h4 {
-  font-family: var(--futura);
-  font-weight: 500;
-  font-size: 1.25rem;
-  margin-top: 1rem;
-  margin-bottom: 0rem;
-  padding: 0;
-  text-decoration: underline;
-}
-h5 {
-  font-family: var(--century-gothic);
-  font-size: 1.125rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  background-color: var(--light-blue);
-  text-align: center;
-  padding: 10px;
-}
 .about-image {
   width: 200px;
   margin-left: 0;
@@ -232,9 +214,9 @@ h5 {
 .input {
   color: var(--navy);
   padding: 0.5rem;
-  border: 2px solid gray;
-  border-radius: 5px;
+  border: 3px solid var(--light-blue);
   outline: none;
+  border-radius: 0;
 }
 .input:focus {
   border-color: var(--gold);
@@ -459,9 +441,6 @@ footer p {
     grid-template-columns: auto auto;
     gap: 3rem;
   }
-  h5 {
-    font-size: 1.25;
-  }
 }
 @media only screen and (min-width: 1200px) {
   /* header
@@ -527,9 +506,6 @@ footer p {
     margin-left: 5%;
     width: 60%;
   }
-  h4 {
-    font-size: 1.375rem;
-  }
   .line-wrapper {
     margin-left: 2rem;
     margin-right: 2rem;
@@ -559,8 +535,5 @@ footer p {
   .line-wrapper {
     width: 70%;
     margin: 0 auto 1rem auto;
-  }
-  h4 {
-    font-size: 1.5rem;
   }
 }

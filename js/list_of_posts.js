@@ -78,7 +78,7 @@ async function fetchPosts() {
      <figure class="post-image">
      <img class="post-image" src="${mediaArray[j].source_url}" alt="${mediaArray[j].alt_text}"/>
      </figure>
-     <h4>${results[i].title.rendered}</h4>
+     <h2 class="dynamic-header">${results[i].title.rendered}</h2>
      <div class="info-container">
      <p class="info">${categoryName}</p>
      <p class="info">${results[i].formatted_date}</p>
@@ -88,8 +88,17 @@ async function fetchPosts() {
      </a>
      </div>
      `;
+
+        const sliderHeading = document.querySelectorAll(".dynamic-header");
+
+        if (document.location.pathname === "/index.html") {
+          sliderHeading.forEach(function (h2) {
+            h2.outerHTML = "<h4>" + h2.innerHTML + "</h4>";
+          });
+        }
       }
 
+      //main-featured post
       if (
         results[i].tags.length >= 2 &&
         document.location.pathname === "/index.html"

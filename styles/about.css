@@ -60,6 +60,17 @@ blockquote {
   padding-left: 1rem;
   margin: 2rem 1rem 2rem 1rem;
 }
+/* converted heading */
+h3 {
+  font-family: var(--century-gothic);
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: var(--light-blue);
+  text-align: center;
+  padding: 10px;
+  margin: 25px 0 1rem 0;
+}
 /* styles that change
 --------------------*/
 @media only screen and (min-width: 768px) {
@@ -83,6 +94,10 @@ blockquote {
   }
   .post-text {
     min-width: 524px;
+  }
+  /* converted heading */
+  h3 {
+    font-size: 1.25rem;
   }
 }
 @media only screen and (min-width: 992px) {

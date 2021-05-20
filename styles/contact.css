@@ -79,6 +79,17 @@ textarea {
     opacity: 1;
   }
 }
+/* converted heading */
+h2 {
+  font-family: var(--century-gothic);
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: var(--light-blue);
+  text-align: center;
+  padding: 10px;
+  margin: 25px 0 1rem 0;
+}
 /* styles that change
 --------------------*/
 @media only screen and (min-width: 576px) {
@@ -98,6 +109,10 @@ textarea {
   #contact-form {
     padding-right: 15%;
     padding-left: 15%;
+  }
+  /* converted heading */
+  h2 {
+    font-size: 1.25rem;
   }
 }
 @media only screen and (min-width: 900px) {
@@ -121,8 +136,8 @@ textarea {
     padding-left: 15%;
   }
   .contact-input label {
-  font-size: 1rem;
-}
+    font-size: 1rem;
+  }
 }
 @media only screen and (min-width: 1600px) {
   h1 {
