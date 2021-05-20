@@ -6,21 +6,24 @@ main {
   margin: 0 auto;
 }
 .main-container {
-  background-image: url("../images/main_background_image_mobile.jpg");
-  background-size: contain;
+  background: url("../images/main_background_image-upto576px.jpg") no-repeat
+    center center;
+  background-size: auto;
   margin-top: 0;
   text-align: center;
   height: 670px;
+  position: relative;
 }
 .main-heading {
-  max-width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
   display: inline-block;
 }
 .main-heading p {
   display: block;
   text-align: right;
   color: var(--navy);
-  padding: 0 2rem;
+  padding: 0 1rem;
   margin-top: 0.5rem;
 }
 strong {
@@ -30,25 +33,32 @@ h1 {
   display: inline-block;
   background-color: var(--gold);
   font-family: var(--adobe-caslon);
-  font-size: 1.75rem;
+  font-size: 1.625rem;
   font-weight: 400;
   color: var(--black);
   display: inline-block;
-  margin-top: 5rem;
+  margin-top: 4rem;
   margin-bottom: 1rem;
   padding: 1rem 2rem;
   box-shadow: 0 6px 12px #00000029;
 }
 .quote {
-  margin: 200px auto 0 auto;
+  margin: 0 auto 0 auto;
   background-color: #00000066;
   padding: 0.5rem 1rem 1rem 1rem;
+  position: absolute;
+  position: absolute; 
+  left: 0; 
+  right: 0; 
+  bottom: 50px;
+  /* margin-left: 7.5%; 
+  margin-right: 7.5%;  */
 }
 .quote p {
   display: block;
   margin: 0 auto;
   font-family: var(--century-gothic);
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-style: italic;
 }
 .quote p:nth-child(1):before {
@@ -256,9 +266,10 @@ h5 {
   }
 }
 @media only screen and (min-width: 576px) {
-  /* .content-container {
-    width: 85%;
-  } */
+  .main-container {
+    background-image: url("../images/main_background_image-upto768px.jpg");
+    height: 954px;
+  }
   .feature-wrapper {
     width: 85%;
     margin: 0 auto;
@@ -273,15 +284,11 @@ h5 {
 }
 @media only screen and (min-width: 768px) {
   .main-container {
-    background-image: url("../images/main_background_image_tablet.jpg");
-    background-size: contain;
-    height: 952px;
+    background-image: url("../images/main_background_image-upto992px.jpg");
+    height: 698px;
   }
   h1 {
     font-size: 2.5rem;
-  }
-  .quote {
-    margin-top: 480px;
   }
   .feature-wrapper {
     width: 85%;
@@ -311,9 +318,10 @@ h5 {
   }
 }
 @media only screen and (min-width: 992px) {
-  /* .feature-container {
-    width: 80%;
-  } */
+  .main-container {
+    background-image: url("../images/main_background_image-upto1200px.jpg");
+    height: 800px;
+  }
   .feature-wrapper {
     width: 70%;
   }
@@ -329,8 +337,8 @@ h5 {
     background-color: var(--light-grey);
   }
   .main-container {
-    background-image: url("../images/main_background_image.jpg");
-    background-size: cover;
+    background-image: url("../images/main_background_image-upto1600px.jpg");
+    height: 800px;
   }
   h1 {
     font-size: 3.75rem;
@@ -339,9 +347,11 @@ h5 {
   .main-heading p {
     font-size: 1.375rem;
   }
-  .quote {
-    margin-top: 320px;
-  }
+  .quote { 
+  bottom: 100px;
+  /* margin-left: 7.5%; 
+  margin-right: 7.5%;  */
+}
   .quote p {
     font-size: 1.375rem;
   }
@@ -382,18 +392,11 @@ h5 {
 }
 @media only screen and (min-width: 1600px) {
   .main-container {
-    background-image: url("../images/main_background_image-crop.jpg");
-    background-size: cover;
-    margin-top: 0;
-    text-align: center;
-    width: 100%;
-    height: 1000px;
+    background-image: url("../images/main_background_image-upto2560px.jpg");
+    height: 1230px;
   }
   h1 {
     margin-top: 150px;
-  }
-  .quote {
-    margin-top: 380px;
   }
   .content-container {
     width: 75%;
