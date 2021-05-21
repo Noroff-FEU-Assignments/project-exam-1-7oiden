@@ -1,6 +1,7 @@
 const postWrapper = document.querySelector(".post-wrapper");
 const featureWrapper = document.querySelector(".feature-wrapper");
 
+//important! this variable is redeclaired at common_scripts.js
 var htmlSelector = document.querySelectorAll("html");
 
 console.log(htmlSelector[0]);
