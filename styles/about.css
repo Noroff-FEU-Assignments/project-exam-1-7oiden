@@ -54,11 +54,51 @@ h2 {
 blockquote {
   font-family: var(--century-gothic);
   font-weight: 600;
+  font-size: 1.125rem;
   font-style: italic;
-  color: var(--blue-gray);
+  color: var(--navy);
   border-left: 3px solid var(--light-blue);
   padding-left: 1rem;
   margin: 2rem 1rem 2rem 1rem;
+}
+.bottom-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+.bottom-wrapper figure {
+  margin: 0;
+  width: 306px;
+  margin-right: 2rem;
+}
+.bottom-wrapper figure img {
+  margin: 0;
+  padding-bottom: 1.5rem;
+  width: 306px;
+}
+.bottom-wrapper div p {
+  display: block;
+  margin: 0;
+  padding-bottom: 1rem;
+}
+#bold-text {
+ font-weight: bold;
+}
+.dividing-line {
+  margin: 3rem 10px;
+  height: 1px;
+  background: -webkit-linear-gradient(
+    left,
+    #fff 0%,
+    #ccc 15%,
+    #ccc 85%,
+    #fff 100%
+  );
+}
+hr {
+  background-color: #ccc;
+  border: none;
 }
 /* converted heading */
 h3 {
@@ -99,6 +139,11 @@ h3 {
   h3 {
     font-size: 1.25rem;
   }
+  .bottom-wrapper {
+    flex-direction: row;
+    margin-bottom: 3rem;
+    align-items: flex-start;
+  }
 }
 @media only screen and (min-width: 992px) {
   section {
@@ -126,6 +171,9 @@ h3 {
     font-size: 1.125rem;
   }
   blockquote {
+    font-size: 1.25rem;
+  }
+  .bottom-wrapper p {
     font-size: 1.125rem;
   }
 }

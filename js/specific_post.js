@@ -105,9 +105,13 @@ function createHtml(details) {
       modalImage.src = `${details._embedded["wp:featuredmedia"]["0"].source_url}`;
       captionText.innerHTML = `${details._embedded["wp:featuredmedia"]["0"].caption.rendered}`;
       document.body.style.position = "fixed";
-    } else if (!event.target.matches("#image")) {
+    } else if (
+      !event.target.matches("#image") &&
+      modal.style.display === "block"
+    ) {
       event.preventDefault();
       event.stopPropagation();
+      document.body.style.position = "static";
       modal.style.display = "none";
     }
   }
