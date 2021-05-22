@@ -202,7 +202,7 @@ aside {
   display: block;
   font-family: var(--adobe-caslon);
   text-decoration: underline;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   margin-top: 0;
   padding-top: 0;
 }
@@ -231,9 +231,8 @@ label {
   margin-bottom: 3px;
 }
 .error-message {
-  font-size: 0.875rem;
   text-align: left;
-  color: red;
+  color: #be3e35;
 }
 .error-message:before {
   content: "\002A";
@@ -365,16 +364,16 @@ input[type="search"] {
 .info-container {
   display: flex;
   flex-wrap: wrap;
-  font-size: 0.875rem;
   font-weight: 600;
   margin-top: 5px;
   padding: 0;
   text-transform: uppercase;
 }
 .info-container p {
-  color: var(--blue-gray);
+  color: var(--navy);
   padding: 0;
   margin-top: 0;
+  font-size: 1rem;
 }
 .info:after {
   content: "\2215";
@@ -508,6 +507,14 @@ footer p {
   .social-media:hover {
     color: var(--gold);
   }
+  .breadcrumb {
+    width: 100%;
+    padding-top: 1rem;
+    padding-left: 5%;
+    font-size: 1rem;
+    background-color: white;
+  }
+
   /* main
 --------------------*/
   .breadcrumb {
@@ -531,6 +538,9 @@ footer p {
   }
   aside {
     flex: 1;
+  }
+  footer p {
+    font-size: 1.125rem;
   }
 }
 @media only screen and (min-width: 1600px) {

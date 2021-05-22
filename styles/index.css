@@ -47,12 +47,12 @@ h1 {
   background-color: #00000066;
   padding: 0.5rem 1rem 1rem 1rem;
   position: absolute;
-  position: absolute; 
-  left: 0; 
-  right: 0; 
+  position: absolute;
+  left: 0;
+  right: 0;
   bottom: 50px;
-  /* margin-left: 7.5%; 
-  margin-right: 7.5%;  */
+  /* margin-left: 30%; 
+  margin-right: 30%;  */
 }
 .quote p {
   display: block;
@@ -232,10 +232,12 @@ h4 {
   cursor: pointer;
 }
 .fa-chevron-circle-left {
+  font-size: 2rem;
   margin-right: 1rem;
   color: var(--navy);
 }
 .fa-chevron-circle-right {
+  font-size: 2rem;
   margin-left: 1rem;
   color: var(--navy);
 }
@@ -255,7 +257,7 @@ h5 {
   background-color: var(--light-blue);
   text-align: center;
   padding: 10px;
-  margin: 25px 0 1rem 0;
+  margin: 2rem 0 1rem 0;
 }
 /* styles that change
 --------------------*/
@@ -311,7 +313,12 @@ h5 {
   .slideshow-container {
     width: 85%;
     margin: 0 auto;
-    /* background-color: hotpink; */
+  }
+  .fa-chevron-circle-left {
+    font-size: 2.5rem;
+  }
+  .fa-chevron-circle-right {
+    font-size: 2.5rem;
   }
   h5 {
     font-size: 1.25rem;
@@ -347,11 +354,11 @@ h5 {
   .main-heading p {
     font-size: 1.375rem;
   }
-  .quote { 
-  bottom: 100px;
-  /* margin-left: 7.5%; 
+  .quote {
+    bottom: 100px;
+    /* margin-left: 7.5%; 
   margin-right: 7.5%;  */
-}
+  }
   .quote p {
     font-size: 1.375rem;
   }

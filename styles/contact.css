@@ -23,8 +23,8 @@ h1 {
   font-weight: 400;
 }
 #contact-form {
-  background-color: #d2d6d999;
-  border: none;
+  background-color: var(--light-grey);
+  border: 6px solid var(--light-blue);
   margin-bottom: 2rem;
   padding-right: 7.5%;
   padding-left: 7.5%;
@@ -88,7 +88,7 @@ h2 {
   background-color: var(--light-blue);
   text-align: center;
   padding: 10px;
-  margin: 25px 0 1rem 0;
+  margin: 2rem 0 1rem 0;
 }
 /* styles that change
 --------------------*/

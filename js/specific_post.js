@@ -7,7 +7,7 @@ const contentText = document.querySelector(".post-text");
 const modal = document.querySelector(".modal");
 const modalImage = document.querySelector("#image");
 const captionText = document.querySelector("#caption");
-const span = document.getElementsByClassName("close")[0];
+
 const queryString = document.location.search;
 
 const params = new URLSearchParams(queryString);
@@ -30,7 +30,7 @@ async function fetchSpecific() {
 
     console.log(details);
 
-    document.title = `Passionate Photography | ${details.title.rendered}`;
+    document.title = `Passionate Photography | Post-page | ${details.title.rendered}`;
 
     createHtml(details);
   } catch (error) {
@@ -58,7 +58,6 @@ function createHtml(details) {
 
   let categoryName;
   let category = details.categories[0];
-
 
   if (categoriesArray.length === 0) {
     categoryName = "Unspecified";
@@ -97,23 +96,23 @@ function createHtml(details) {
      <div class="post-text">${details.content.rendered}</div>
  `;
 
- //modal
-  document.addEventListener(
-    "click",
-    function (event) {
-      if (!event.target.matches(".post-image")) return;
-      {
-        modal.style.display = "block";
-        modalImage.src = `${details._embedded["wp:featuredmedia"]["0"].source_url}`;
-        captionText.innerHTML = `${details._embedded["wp:featuredmedia"]["0"].caption.rendered}`;
-      }
-    },
-    false
-  );
+  const head = document.querySelector("header");
 
-  span.onclick = function () {
-    modal.style.display = "none";
-  };
+  //modal
+  function openModal(event) {
+    if (event.target.matches(".post-image")) {
+      modal.style.display = "block";
+      modalImage.src = `${details._embedded["wp:featuredmedia"]["0"].source_url}`;
+      captionText.innerHTML = `${details._embedded["wp:featuredmedia"]["0"].caption.rendered}`;
+      document.body.style.position = "fixed";
+    } else if (!event.target.matches("#image")) {
+      event.preventDefault();
+      event.stopPropagation();
+      modal.style.display = "none";
+    }
+  }
+
+  document.addEventListener("click", openModal);
 }
 
 //fetch comments

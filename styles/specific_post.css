@@ -128,14 +128,17 @@ h3 {
   height: 100%;
   overflow: auto;
   background-color: #000000e6;
+  cursor: pointer;
 }
 .modal-content {
   margin: auto;
   display: block;
-  width: 85%;
+  width: 95%;
   height: auto;
   max-width: 1080px;
   max-height: 720px;
+  z-index: 100;
+  cursor: default;
 }
 #caption {
   margin: auto;
@@ -160,7 +163,7 @@ h3 {
     transform: scale(1);
   }
 }
-.close {
+/* .close {
   position: absolute;
   top: 30px;
   right: 7.5%;
@@ -170,7 +173,7 @@ h3 {
 }
 .close i {
   font-size: 1.5rem;
-}
+} */
 #comment-line {
   margin-top: 2rem;
   margin-bottom: 0;
@@ -264,7 +267,7 @@ h4 {
   background-color: var(--light-blue);
   text-align: center;
   padding: 10px;
-  margin: 25px 0 1rem 0;
+  margin: 32px 0 1rem 0;
 }
 /* styles that change
 --------------------*/
@@ -287,9 +290,15 @@ h4 {
   .post-text {
     min-width: 524px;
   }
+  figcaption {
+    font-size: 1rem;
+  }
   /* converted heading */
   h4 {
     font-size: 1.25rem;
+  }
+  .modal-content {
+    width: 85%;
   }
 }
 @media only screen and (min-width: 992px) {

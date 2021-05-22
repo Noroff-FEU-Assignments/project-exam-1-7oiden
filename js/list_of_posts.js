@@ -104,7 +104,10 @@ async function fetchPosts() {
       }
 
       //main-featured post
-      if (results[i].tags.length >= 2 && htmlSelector[0].className === "index-page") {
+      if (
+        results[i].tags.length >= 2 &&
+        htmlSelector[0].className === "index-page"
+      ) {
         featureWrapper.innerHTML += `
      <div class="feature-container">
      <a href="specific_post.html?id=${results[i].id}">
