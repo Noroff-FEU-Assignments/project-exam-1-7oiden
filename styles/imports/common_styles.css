@@ -373,7 +373,7 @@ input[type="search"] {
   color: var(--navy);
   padding: 0;
   margin-top: 0;
-  font-size: 1rem;
+  font-size: 0.875rem;
 }
 .info:after {
   content: "\2215";
@@ -554,5 +554,8 @@ footer p {
   .line-wrapper {
     width: 70%;
     margin: 0 auto 1rem auto;
+  }
+  .info-container p {
+    font-size: 1rem;
   }
 }

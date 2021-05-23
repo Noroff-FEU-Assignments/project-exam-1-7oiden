@@ -345,7 +345,7 @@ h5 {
   }
   .main-container {
     background-image: url("../images/main_background_image-upto1600px.jpg");
-    height: 800px;
+    height: 720px;
   }
   h1 {
     font-size: 3.75rem;
@@ -436,8 +436,7 @@ h5 {
     height: 240px;
   }
   .post-text {
-    max-width: 360px;
-    /* background-color: violet; */
+    max-width: 380px;
   }
   .line-wrapper {
     width: 100%;
