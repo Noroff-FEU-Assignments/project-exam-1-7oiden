@@ -92,3 +92,7 @@ function validateEmail(contactEmail) {
   const patternMatches = regEx.test(contactEmail);
   return patternMatches;
 }
+
+// I'm aware that the brief states that the inputs should have more than 5, 15 and 25 characters.
+  // But for me it makes much more sense to have at least 5, 15 and 25 as they are "whole" numbers,
+  // and that a minumum 6 character name, seems way to long

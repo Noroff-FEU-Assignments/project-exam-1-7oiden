@@ -37,7 +37,6 @@ function validateForm(event) {
   }
   if (validateEmail(newsletterEmail.value)) {
     subscribeMessage.innerHTML = `<p id="subscribe-message">Welcome! Please check your inbox</p>`;
-    //newsletterForm.reset();
   }
 }
 

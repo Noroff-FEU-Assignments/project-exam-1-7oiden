@@ -22,6 +22,9 @@ section {
 section a {
   margin-top: 2rem;
 }
+.line-wrapper {
+  margin-bottom: 1rem;
+}
 h1 {
   font-family: var(--century-gothic);
   color: var(--black);
@@ -65,12 +68,11 @@ blockquote {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 3rem;
+  padding-bottom: 3rem;
 }
 .bottom-wrapper figure {
   margin: 0;
   width: 306px;
-  margin-right: 2rem;
 }
 .bottom-wrapper figure img {
   margin: 0;
@@ -83,7 +85,7 @@ blockquote {
   padding-bottom: 1rem;
 }
 #bold-text {
- font-weight: bold;
+  font-weight: bold;
 }
 .dividing-line {
   margin: 3rem 10px;
@@ -100,7 +102,7 @@ hr {
   background-color: #ccc;
   border: none;
 }
-/* converted heading */
+/* JS converted heading */
 h3 {
   font-family: var(--century-gothic);
   font-size: 1.125rem;
@@ -135,7 +137,7 @@ h3 {
   .post-text {
     min-width: 524px;
   }
-  /* converted heading */
+  /* JS converted heading */
   h3 {
     font-size: 1.25rem;
   }
@@ -143,6 +145,9 @@ h3 {
     flex-direction: row;
     margin-bottom: 3rem;
     align-items: flex-start;
+  }
+  .bottom-wrapper figure {
+    margin-right: 2rem;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -159,7 +164,6 @@ h3 {
     width: 90%;
     flex-direction: row;
     margin: 0 auto;
-    /* background-color: blueviolet; */
   }
   .about-wrapper {
     flex: 2;

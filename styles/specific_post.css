@@ -103,7 +103,6 @@ h3 {
   margin-bottom: 2rem;
   background-color: #d2d6d999;
   padding: 2rem 1rem;
-  /* border-radius: 5px; */
 }
 .comment-image {
   width: 75px;
@@ -164,17 +163,6 @@ h3 {
     transform: scale(1);
   }
 }
-/* .close {
-  position: absolute;
-  top: 30px;
-  right: 7.5%;
-  color: #fff;
-  font-size: 2rem;
-  cursor: pointer;
-}
-.close i {
-  font-size: 1.5rem;
-} */
 #comment-line {
   margin-top: 2rem;
   margin-bottom: 0;
@@ -184,7 +172,7 @@ h3 {
   margin-top: 3rem;
 }
 .leave-comment {
-  background-color: #d2d6d999;
+  background-color: var(--light-grey);
   padding-top: 1rem;
   padding-bottom: 2rem;
   margin-top: 2rem;
@@ -213,6 +201,9 @@ h3 {
   border: 3px solid var(--light-blue);
   outline: none;
 }
+.comment-input:focus {
+  border: 3px solid var(--gold);
+}
 #comment-author {
   padding: 0;
   margin: 0;
@@ -229,9 +220,8 @@ h3 {
   font-size: 1rem;
 }
 .comment-error {
-  font-size: 0.875rem;
   text-align: left;
-  color: red;
+  color: #be3e35;
   visibility: hidden;
 }
 .comment-error:before {
@@ -259,7 +249,7 @@ h3 {
 #comment-button {
   margin-top: 3rem;
 }
-/* converted heading */
+/* JS converted heading */
 h4 {
   font-family: var(--century-gothic);
   font-size: 1.125rem;
@@ -270,6 +260,7 @@ h4 {
   padding: 10px;
   margin: 32px 0 1rem 0;
 }
+
 /* styles that change
 --------------------*/
 @media only screen and (min-width: 768px) {
@@ -294,7 +285,7 @@ h4 {
   figcaption {
     font-size: 1rem;
   }
-  /* converted heading */
+  /* JS converted heading */
   h4 {
     font-size: 1.25rem;
   }

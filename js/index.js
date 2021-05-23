@@ -1,5 +1,4 @@
 //carousel
-
 const slider = document.querySelector(".post-wrapper");
 const indicatorCircles = document.querySelector(".circle-wrapper");
 const circles = document.querySelectorAll(".circle");
@@ -30,4 +29,3 @@ next.addEventListener("click", function () {
   indicatorCircles.children[sliderIndex].classList.add("selected");
   slider.style.transform = "translate(" + sliderIndex * -25 + "%)";
 });
-
