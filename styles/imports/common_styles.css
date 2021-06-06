@@ -225,6 +225,7 @@ input[placeholder] {
 }
 label {
   font-size: 1rem;
+  font-weight: bold;
   text-align: left;
   color: var(--navy);
   margin-bottom: 3px;
@@ -510,10 +511,9 @@ footer p {
     width: 100%;
     padding-top: 1rem;
     padding-left: 5%;
-    font-size: 1rem;
+    font-size: 1.125rem;
     background-color: white;
   }
-
   /* main
 --------------------*/
   .breadcrumb {
@@ -528,6 +528,10 @@ footer p {
   .arrow {
     color: var(--navy);
     font-size: 1rem;
+  }
+  .button {
+    font-family: var(--adobe-caslon);
+    font-size: 1.5rem;
   }
   /* aside */
   .aside-container {
@@ -556,5 +560,11 @@ footer p {
   }
   .info-container p {
     font-size: 1rem;
+  }
+  .social-media {
+    font-size: 2.5rem;
+  }
+  ul.menu {
+    font-size: 1.375rem;
   }
 }

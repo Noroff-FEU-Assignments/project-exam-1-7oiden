@@ -161,3 +161,7 @@ if (htmlSelector[0].className !== "index-page") {
 
   postLoader.addEventListener("click", loadMorePosts);
 }
+
+//sort 
+
+

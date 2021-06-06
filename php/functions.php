@@ -628,6 +628,8 @@ function twentytwentyone_add_ie_class() {
 }
 add_action( 'wp_footer', 'twentytwentyone_add_ie_class' );
 
+ add_filter( 'rest_allow_anonymous_comments', '__return_true' );
+
 
 /**
  * Add a Formatted Date to the WordPress REST API JSON Post Object
